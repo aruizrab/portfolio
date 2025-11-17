@@ -1,0 +1,22 @@
+<section id="experience" class="section">
+    <div class="section__heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Impact at a glance</h2>
+    </div>
+    <div class="timeline">
+        @for (job of history; track job.company) {
+        <article>
+            <header>
+                <p class="eyebrow">{{ job.start }} - {{ job.end }}</p>
+                <h3>{{ job.role }} - {{ job.company }}</h3>
+            </header>
+            <p>{{ job.description }}</p>
+            <ul>
+                @for (highlight of job.highlights; track highlight) {
+                <li>{{ highlight }}</li>
+                }
+            </ul>
+        </article>
+        }
+    </div>
+</section>

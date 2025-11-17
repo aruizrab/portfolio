@@ -1,0 +1,44 @@
+.section {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.section__heading {
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.tags li {
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    font-size: 0.8rem;
+}
+
+.inline-link {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--accent);
+}

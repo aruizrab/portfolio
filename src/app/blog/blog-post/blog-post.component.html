@@ -1,0 +1,13 @@
+<section class="blog">
+    <a routerLink="/blog" class="back"><- Back to posts</a>
+            <ng-container *ngIf="post$ | async as post; else missing">
+                <p class="eyebrow">{{ post.date | date: 'fullDate' }}</p>
+                <h1>{{ post.title }}</h1>
+                <p class="description">{{ post.description }}</p>
+                <div class="body" [innerHTML]="post.safeHtml"></div>
+            </ng-container>
+
+            <ng-template #missing>
+                <p>That post could not be found. <a routerLink="/blog">View all posts.</a></p>
+            </ng-template>
+</section>

@@ -1,0 +1,22 @@
+.back {
+    display: inline-flex;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+.body {
+    margin-top: 2rem;
+    line-height: 1.7;
+}
+
+.body h2,
+.body h3 {
+    margin-top: 1.5rem;
+}
+
+.body pre {
+    background: #101014;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+}

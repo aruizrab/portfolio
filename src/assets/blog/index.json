@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "building-with-angular",
+    "title": "Building with Angular 17",
+    "description": "How I approach modern Angular apps with standalone components and clean architecture.",
+    "date": "2025-11-01",
+    "tags": [
+      "Angular",
+      "Architecture"
+    ]
+  },
+  {
+    "slug": "shipping-with-github-pages",
+    "title": "Shipping with GitHub Pages",
+    "description": "Notes on automating Angular deployments directly from GitHub Actions.",
+    "date": "2025-10-12",
+    "tags": [
+      "DevOps",
+      "GitHub Pages"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container">
+    <a class="brand" routerLink="/">AD</a>
+    <nav>
+      <a routerLink="/" fragment="projects">Projects</a>
+      <a routerLink="/" fragment="experience">Experience</a>
+      <a routerLink="/blog" routerLinkActive="active">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>(c) {{ year }} Alex Developer - Built with Angular 17.</p>
+  </div>
+</footer>

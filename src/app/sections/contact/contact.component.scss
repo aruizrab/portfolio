@@ -1,0 +1,19 @@
+.card {
+    border: 1px solid var(--border);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    background: var(--surface);
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.socials a {
+    text-decoration: none;
+    font-weight: 600;
+}

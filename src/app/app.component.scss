@@ -1,0 +1,55 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    background: rgba(5, 5, 10, 0.8);
+    border-bottom: 1px solid var(--border);
+}
+
+.container {
+    width: min(1100px, 90vw);
+    margin: 0 auto;
+    padding: 1.2rem 0;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--text-strong);
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+nav a.active,
+nav a:hover {
+    color: var(--text-strong);
+}
+
+main.container {
+    padding: 0 0 4rem;
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}

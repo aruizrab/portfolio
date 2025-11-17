@@ -1,0 +1,66 @@
+.hero {
+    padding: clamp(3rem, 6vw, 6rem) 0;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+}
+
+.summary {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 60ch;
+}
+
+.availability {
+    margin: 1rem 0 2rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.pill {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.9rem;
+}
+
+.cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.cta a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.cta .primary {
+    background: var(--accent);
+    color: #0c0c0f;
+}
+
+.cta .ghost {
+    border-color: var(--border);
+}

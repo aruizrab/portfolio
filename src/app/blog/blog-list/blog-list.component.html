@@ -1,0 +1,22 @@
+<section class="blog">
+    <header>
+        <p class="eyebrow">Writing</p>
+        <h1>Blog</h1>
+        <p>Field notes on building Angular products, DX tooling, and deployment workflows.</p>
+    </header>
+
+    <div class="posts" *ngIf="posts$ | async as posts">
+        @for (post of posts; track post.slug) {
+        <article>
+            <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
+            <h2><a [routerLink]="['/blog', post.slug]">{{ post.title }}</a></h2>
+            <p>{{ post.description }}</p>
+            <ul class="tags">
+                @for (tag of post.tags; track tag) {
+                <li>{{ tag }}</li>
+                }
+            </ul>
+        </article>
+        }
+    </div>
+</section>

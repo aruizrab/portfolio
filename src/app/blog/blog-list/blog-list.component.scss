@@ -1,0 +1,28 @@
+header {
+    margin-bottom: 2.5rem;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+article {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+}
+
+.tags {
+    list-style: none;
+    gap: 0.5rem;
+    display: flex;
+    padding: 0;
+}
+
+.tags li {
+    background: var(--chip-bg);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.8rem;
+}
