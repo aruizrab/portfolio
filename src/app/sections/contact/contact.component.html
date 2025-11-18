@@ -1,14 +1,19 @@
 <section id="contact" class="section">
     <div class="section__heading">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's build together</h2>
+        <p class="eyebrow">{{ contact().eyebrow }}</p>
+        <h2>{{ contact().title }}</h2>
+        <p>{{ contact().note }}</p>
     </div>
     <div class="card">
-        <p><strong>Email:</strong> <a [href]="'mailto:' + contact.email">{{ contact.email }}</a></p>
-        <p><strong>Location:</strong> {{ contact.location }}</p>
-        <p>{{ contact.availabilityNote }}</p>
+        <p><strong>{{ contact().labels.email }}:</strong> <a [href]="'mailto:' + contact().email">{{ contact().email
+                }}</a></p>
+        <p><strong>{{ contact().labels.location }}:</strong> {{ contact().location }}</p>
+        <p><strong>{{ contact().labels.phone }}:</strong> <a [href]="'tel:' + contact().phoneLink">{{ contact().phone
+                }}</a></p>
+        <p><strong>{{ contact().labels.website }}:</strong> <a [href]="contact().website" target="_blank"
+                rel="noopener">{{ contact().website }}</a></p>
         <ul class="socials">
-            @for (item of contact.socials; track item.label) {
+            @for (item of contact().socials; track item.label) {
             <li><a [href]="item.url" target="_blank" rel="noopener">{{ item.label }}</a></li>
             }
         </ul>

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { HERO } from '../../data/portfolio-data';
+import { PortfolioContentService } from '../../services/portfolio-content.service';
 
 @Component({
     selector: 'app-landing',
@@ -11,6 +11,6 @@ import { HERO } from '../../data/portfolio-data';
     styleUrl: './landing.component.scss'
 })
 export class LandingComponent {
-    readonly hero = HERO;
-    readonly focusAreas = ['Angular 17', 'TypeScript', 'Design Systems', 'DevRel', 'DX Tooling'];
+    private readonly content = inject(PortfolioContentService);
+    readonly hero = this.content.hero;
 }

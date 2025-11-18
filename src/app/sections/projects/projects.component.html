@@ -1,10 +1,11 @@
 <section id="projects" class="section">
     <div class="section__heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Recent case studies</h2>
+        <p class="eyebrow">{{ projects().eyebrow }}</p>
+        <h2>{{ projects().title }}</h2>
+        <p>{{ projects().intro }}</p>
     </div>
     <div class="grid">
-        @for (project of projects; track project.title) {
+        @for (project of projects().items; track project.title) {
         <article class="card">
             <header>
                 <h3>{{ project.title }}</h3>
@@ -16,7 +17,7 @@
                 }
             </ul>
             @if (project.link) {
-            <a class="inline-link" [href]="project.link" target="_blank" rel="noopener">View details</a>
+            <a class="inline-link" [href]="project.link" target="_blank" rel="noopener">{{ projects().linkLabel }}</a>
             }
         </article>
         }

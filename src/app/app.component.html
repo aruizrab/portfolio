@@ -1,11 +1,28 @@
 <header class="site-header">
   <div class="container">
-    <a class="brand" routerLink="/">AD</a>
+    <a class="brand" routerLink="/">{{ hero().name }}</a>
     <nav>
-      <a routerLink="/" fragment="projects">Projects</a>
-      <a routerLink="/" fragment="experience">Experience</a>
-      <a routerLink="/blog" routerLinkActive="active">Blog</a>
-      <a href="#contact">Contact</a>
+      <a routerLink="/" fragment="projects">{{ navigation().projects }}</a>
+      <a routerLink="/" fragment="experience">{{ navigation().experience }}</a>
+      <a routerLink="/blog" routerLinkActive="active">{{ navigation().blog }}</a>
+      <a routerLink="/" fragment="contact">{{ navigation().contact }}</a>
+      <div class="language-switcher" [class.open]="menuOpen()">
+        <button type="button" class="language-toggle" (click)="toggleLanguageMenu()" [attr.aria-expanded]="menuOpen()"
+          aria-haspopup="listbox" [attr.aria-label]="currentLanguage().label">
+          <img [src]="currentLanguage().icon" [alt]="currentLanguage().label" width="20" height="14" />
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+        <ul *ngIf="menuOpen()" role="listbox" @dropdownAnimation>
+          @for (option of otherLanguages(); track option.code) {
+          <li>
+            <button type="button" role="option" [attr.aria-selected]="false" (click)="selectLanguage(option.code)"
+              [attr.aria-label]="option.label">
+              <img [src]="option.icon" [alt]="option.label" width="20" height="14" />
+            </button>
+          </li>
+          }
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
@@ -16,6 +33,6 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>(c) {{ year }} Alex Developer - Built with Angular 17.</p>
+    <p>© {{ year }} {{ hero().name }} · Built with Angular 17.</p>
   </div>
 </footer>

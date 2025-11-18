@@ -1,13 +1,13 @@
 <section id="education" class="section">
     <div class="section__heading">
-        <p class="eyebrow">Education</p>
-        <h2>Academic background</h2>
+        <p class="eyebrow">{{ education().eyebrow }}</p>
+        <h2>{{ education().title }}</h2>
     </div>
     <div class="grid">
-        @for (school of schools; track school.school) {
+        @for (school of education().items; track school.school) {
         <article class="card">
             <h3>{{ school.program }}</h3>
-            <p class="eyebrow">{{ school.school }} - {{ school.start }} - {{ school.end }}</p>
+            <p class="eyebrow">{{ school.school }} · {{ school.period }}</p>
             <p>{{ school.details }}</p>
         </article>
         }

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { EDUCATION } from '../../data/portfolio-data';
+import { Component, inject } from '@angular/core';
+import { PortfolioContentService } from '../../services/portfolio-content.service';
 
 @Component({
     selector: 'app-education',
@@ -10,5 +10,6 @@ import { EDUCATION } from '../../data/portfolio-data';
     styleUrl: './education.component.scss'
 })
 export class EducationComponent {
-    readonly schools = EDUCATION;
+    private readonly content = inject(PortfolioContentService);
+    readonly education = this.content.education;
 }

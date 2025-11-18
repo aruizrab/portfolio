@@ -1,17 +1,17 @@
 <section id="home" class="hero">
     <div>
-        <p class="eyebrow">{{ hero.role }} - {{ hero.location }}</p>
-        <h1>Hi, I'm {{ hero.name }}.</h1>
-        <p class="summary">{{ hero.summary }}</p>
-        <p class="availability">{{ hero.availability }}</p>
+        <p class="eyebrow">{{ hero().role }} · {{ hero().location }}</p>
+        <h1>{{ hero().heading }}</h1>
+        <p class="summary">{{ hero().summary }}</p>
+        <p class="availability">{{ hero().availability }}</p>
         <div class="pill-group">
-            @for (item of focusAreas; track item) {
+            @for (item of hero().focusAreas; track item) {
             <span class="pill">{{ item }}</span>
             }
         </div>
         <div class="cta">
-            <a routerLink="/blog" class="primary">Read the blog</a>
-            <a href="#projects" class="ghost">See projects</a>
+            <a routerLink="/blog" class="primary">{{ hero().ctaPrimary }}</a>
+            <a href="#projects" class="ghost">{{ hero().ctaSecondary }}</a>
         </div>
     </div>
 </section>

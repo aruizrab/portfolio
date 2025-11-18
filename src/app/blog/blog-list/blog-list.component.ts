@@ -1,8 +1,9 @@
 import { CommonModule, DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
 import { BlogService } from '../blog.service';
+import { PortfolioContentService } from '../../services/portfolio-content.service';
 
 @Component({
     selector: 'app-blog-list',
@@ -13,6 +14,8 @@ import { BlogService } from '../blog.service';
 })
 export class BlogListComponent {
     readonly posts$ = this.blogService.getPosts();
+    private readonly content = inject(PortfolioContentService);
+    readonly blog = this.content.blog;
 
     constructor(private blogService: BlogService) { }
 }

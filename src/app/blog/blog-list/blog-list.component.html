@@ -1,8 +1,8 @@
 <section class="blog">
     <header>
-        <p class="eyebrow">Writing</p>
-        <h1>Blog</h1>
-        <p>Field notes on building Angular products, DX tooling, and deployment workflows.</p>
+        <p class="eyebrow">{{ blog().eyebrow }}</p>
+        <h1>{{ blog().title }}</h1>
+        <p>{{ blog().description }}</p>
     </header>
 
     <div class="posts" *ngIf="posts$ | async as posts">

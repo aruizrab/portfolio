@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { CONTACT } from '../../data/portfolio-data';
+import { Component, inject } from '@angular/core';
+import { PortfolioContentService } from '../../services/portfolio-content.service';
 
 @Component({
     selector: 'app-contact',
@@ -10,5 +10,6 @@ import { CONTACT } from '../../data/portfolio-data';
     styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-    readonly contact = CONTACT;
+    private readonly content = inject(PortfolioContentService);
+    readonly contact = this.content.contact;
 }

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { EXPERIENCE } from '../../data/portfolio-data';
+import { Component, inject } from '@angular/core';
+import { PortfolioContentService } from '../../services/portfolio-content.service';
 
 @Component({
     selector: 'app-experience',
@@ -10,5 +10,6 @@ import { EXPERIENCE } from '../../data/portfolio-data';
     styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
-    readonly history = EXPERIENCE;
+    private readonly content = inject(PortfolioContentService);
+    readonly experience = this.content.experience;
 }
