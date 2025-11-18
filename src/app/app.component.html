@@ -6,22 +6,50 @@
       <a routerLink="/" fragment="experience">{{ navigation().experience }}</a>
       <a routerLink="/blog" routerLinkActive="active">{{ navigation().blog }}</a>
       <a routerLink="/" fragment="contact">{{ navigation().contact }}</a>
-      <div class="language-switcher" [class.open]="menuOpen()">
-        <button type="button" class="language-toggle" (click)="toggleLanguageMenu()" [attr.aria-expanded]="menuOpen()"
-          aria-haspopup="listbox" [attr.aria-label]="currentLanguage().label">
-          <img [src]="currentLanguage().icon" [alt]="currentLanguage().label" width="20" height="14" />
-          <span class="chevron" aria-hidden="true"></span>
-        </button>
-        <ul *ngIf="menuOpen()" role="listbox" @dropdownAnimation>
-          @for (option of otherLanguages(); track option.code) {
-          <li>
-            <button type="button" role="option" [attr.aria-selected]="false" (click)="selectLanguage(option.code)"
-              [attr.aria-label]="option.label">
-              <img [src]="option.icon" [alt]="option.label" width="20" height="14" />
-            </button>
-          </li>
-          }
-        </ul>
+      <div class="nav-controls">
+        <div class="theme-switch">
+          <input type="checkbox" class="theme-switch__input" [id]="themeToggleId" [checked]="theme() === 'dark'"
+            (change)="onThemeToggleChange($event)" [attr.aria-label]="themeToggleAriaLabel()" />
+          <label class="theme-switch__label" [for]="themeToggleId">
+            <span class="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="4" />
+                <line x1="12" y1="2" x2="12" y2="5" />
+                <line x1="12" y1="19" x2="12" y2="22" />
+                <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                <line x1="2" y1="12" x2="5" y2="12" />
+                <line x1="19" y1="12" x2="22" y2="12" />
+                <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+              </svg>
+            </span>
+            <span class="theme-switch__icon theme-switch__icon--moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false" fill="currentColor">
+                <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 8.5 8.5 0 1 0 21 14.5z" />
+              </svg>
+            </span>
+            <span class="theme-switch__thumb" aria-hidden="true"></span>
+          </label>
+        </div>
+        <div class="language-switcher" [class.open]="menuOpen()">
+          <button type="button" class="language-toggle" (click)="toggleLanguageMenu()" [attr.aria-expanded]="menuOpen()"
+            aria-haspopup="listbox" [attr.aria-label]="currentLanguage().label">
+            <img [src]="currentLanguage().icon" [alt]="currentLanguage().label" width="25" height="15" />
+            <span class="chevron" aria-hidden="true"></span>
+          </button>
+          <ul *ngIf="menuOpen()" role="listbox" @dropdownAnimation>
+            @for (option of otherLanguages(); track option.code) {
+            <li>
+              <button type="button" role="option" [attr.aria-selected]="false" (click)="selectLanguage(option.code)"
+                [attr.aria-label]="option.label">
+                <img [src]="option.icon" [alt]="option.label" width="25" height="15" />
+              </button>
+            </li>
+            }
+          </ul>
+        </div>
       </div>
     </nav>
   </div>

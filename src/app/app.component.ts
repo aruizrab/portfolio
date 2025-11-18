@@ -5,6 +5,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { PortfolioContentService } from './services/portfolio-content.service';
 import { LanguageService } from './services/language.service';
 import { LanguageCode } from './data/portfolio-data';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,7 @@ import { LanguageCode } from './data/portfolio-data';
 export class AppComponent {
   private readonly content = inject(PortfolioContentService);
   private readonly languageService = inject(LanguageService);
+  private readonly themeService = inject(ThemeService);
 
   readonly year = new Date().getFullYear();
   readonly navigation = this.content.navigation;
@@ -38,6 +40,9 @@ export class AppComponent {
   });
   readonly otherLanguages = computed(() => this.languageOptions.filter((opt) => opt.code !== this.currentLanguage().code));
   readonly menuOpen = signal(false);
+  readonly theme = this.themeService.theme;
+  readonly themeToggleAriaLabel = computed(() => `Toggle theme (current: ${this.theme()})`);
+  readonly themeToggleId = 'theme-toggle';
 
   toggleLanguageMenu(): void {
     this.menuOpen.update((open) => !open);
@@ -46,6 +51,19 @@ export class AppComponent {
   selectLanguage(code: LanguageCode): void {
     this.languageService.setLanguage(code);
     this.menuOpen.set(false);
+  }
+
+  setThemeFromToggle(checked: boolean): void {
+    this.themeService.setTheme(checked ? 'dark' : 'light');
+  }
+
+  onThemeToggleChange(event: Event): void {
+    const target = event.target as HTMLInputElement | null;
+    if (!target) {
+      return;
+    }
+
+    this.setThemeFromToggle(target.checked);
   }
 
   @HostListener('document:click', ['$event'])
