@@ -1,17 +1,17 @@
 <section id="home" class="hero">
     <div>
-        <p class="eyebrow">{{ hero().role }} · {{ hero().location }}</p>
-        <h1>{{ hero().heading }}</h1>
-        <p class="summary">{{ hero().summary }}</p>
-        <p class="availability">{{ hero().availability }}</p>
+        <p class="eyebrow" [appRevealOnScroll]="0">{{ hero().role }} · {{ hero().location }}</p>
+        <h1 [appRevealOnScroll]="1">{{ hero().heading }}</h1>
+        <p class="summary" [appRevealOnScroll]="2">{{ hero().summary }}</p>
+        <p class="availability" [appRevealOnScroll]="3">{{ hero().availability }}</p>
         <div class="pill-group">
-            @for (item of hero().focusAreas; track item) {
-            <span class="pill">{{ item }}</span>
+            @for (item of hero().focusAreas; track item; let idx = $index) {
+            <span class="pill" [appRevealOnScroll]="4 + idx">{{ item }}</span>
             }
         </div>
         <div class="cta">
-            <a routerLink="/blog" class="primary">{{ hero().ctaPrimary }}</a>
-            <a href="#projects" class="ghost">{{ hero().ctaSecondary }}</a>
+            <a routerLink="/blog" class="primary" [appRevealOnScroll]="8">{{ hero().ctaPrimary }}</a>
+            <a href="#projects" class="ghost" [appRevealOnScroll]="9">{{ hero().ctaSecondary }}</a>
         </div>
     </div>
 </section>

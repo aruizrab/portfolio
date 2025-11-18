@@ -1,23 +1,24 @@
 <section id="projects" class="section">
     <div class="section__heading">
-        <p class="eyebrow">{{ projects().eyebrow }}</p>
-        <h2>{{ projects().title }}</h2>
-        <p>{{ projects().intro }}</p>
+        <p class="eyebrow" [appRevealOnScroll]="0">{{ projects().eyebrow }}</p>
+        <h2 [appRevealOnScroll]="1">{{ projects().title }}</h2>
+        <p [appRevealOnScroll]="2">{{ projects().intro }}</p>
     </div>
     <div class="grid">
-        @for (project of projects().items; track project.title) {
-        <article class="card">
+        @for (project of projects().items; track project.title; let idx = $index) {
+        <article class="card" [appRevealOnScroll]="3 + idx">
             <header>
                 <h3>{{ project.title }}</h3>
             </header>
             <p>{{ project.description }}</p>
             <ul class="tags">
-                @for (tech of project.tech; track tech) {
-                <li>{{ tech }}</li>
+                @for (tech of project.tech; track tech; let techIdx = $index) {
+                <li [appRevealOnScroll]="3 + idx + (techIdx * 0.1)">{{ tech }}</li>
                 }
             </ul>
             @if (project.link) {
-            <a class="inline-link" [href]="project.link" target="_blank" rel="noopener">{{ projects().linkLabel }}</a>
+            <a class="inline-link" [href]="project.link" target="_blank" rel="noopener" [appRevealOnScroll]="4 + idx">{{
+                projects().linkLabel }}</a>
             }
         </article>
         }

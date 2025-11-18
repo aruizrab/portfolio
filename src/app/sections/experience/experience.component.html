@@ -1,11 +1,11 @@
 <section id="experience" class="section">
     <div class="section__heading">
-        <p class="eyebrow">{{ experience().eyebrow }}</p>
-        <h2>{{ experience().title }}</h2>
+        <p class="eyebrow" [appRevealOnScroll]="0">{{ experience().eyebrow }}</p>
+        <h2 [appRevealOnScroll]="1">{{ experience().title }}</h2>
     </div>
     <div class="timeline">
-        @for (job of experience().items; track job.company + job.period) {
-        <article>
+        @for (job of experience().items; track job.company + job.period; let idx = $index) {
+        <article [appRevealOnScroll]="2 + idx">
             <header>
                 <p class="eyebrow">{{ job.period }} · {{ job.location }}</p>
                 <h3>{{ job.role }} - {{ job.company }}</h3>
@@ -15,16 +15,16 @@
                 <div>
                     <p class="eyebrow">{{ experience().achievementLabel }}</p>
                     <ul>
-                        @for (item of job.achievements; track item) {
-                        <li>{{ item }}</li>
+                        @for (item of job.achievements; track item; let achIdx = $index) {
+                        <li [appRevealOnScroll]="3 + idx + (achIdx * 0.1)">{{ item }}</li>
                         }
                     </ul>
                 </div>
                 <div>
                     <p class="eyebrow">{{ experience().tasksLabel }}</p>
                     <ul>
-                        @for (task of job.tasks; track task) {
-                        <li>{{ task }}</li>
+                        @for (task of job.tasks; track task; let taskIdx = $index) {
+                        <li [appRevealOnScroll]="4 + idx + (taskIdx * 0.1)">{{ task }}</li>
                         }
                     </ul>
                 </div>

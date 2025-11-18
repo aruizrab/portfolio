@@ -1,11 +1,11 @@
 <section id="education" class="section">
     <div class="section__heading">
-        <p class="eyebrow">{{ education().eyebrow }}</p>
-        <h2>{{ education().title }}</h2>
+        <p class="eyebrow" [appRevealOnScroll]="0">{{ education().eyebrow }}</p>
+        <h2 [appRevealOnScroll]="1">{{ education().title }}</h2>
     </div>
     <div class="grid">
-        @for (school of education().items; track school.school) {
-        <article class="card">
+        @for (school of education().items; track school.school; let idx = $index) {
+        <article class="card" [appRevealOnScroll]="2 + idx">
             <h3>{{ school.program }}</h3>
             <p class="eyebrow">{{ school.school }} · {{ school.period }}</p>
             <p>{{ school.details }}</p>

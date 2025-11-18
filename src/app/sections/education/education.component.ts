@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { PortfolioContentService } from '../../services/portfolio-content.service';
+import { RevealOnScrollDirective } from '../../shared/reveal-on-scroll.directive';
 
 @Component({
     selector: 'app-education',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, RevealOnScrollDirective],
     templateUrl: './education.component.html',
     styleUrl: './education.component.scss'
 })
