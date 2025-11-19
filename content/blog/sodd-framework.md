@@ -7,7 +7,7 @@ tags:
   - SODD Framework
 ---
 
-> If you only want to check the framework's repo, [here it is](https://github.com/aruizrab/sodd-unity-framework).
+(*If you only want to check the framework's repo, [here it is](https://github.com/aruizrab/sodd-unity-framework).*)
 
 # From Heist Academy to a Framework
 
