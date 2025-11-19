@@ -46,4 +46,4 @@ Unit tests use Karma/Jasmine and include basic coverage for the root component.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` installs dependencies, runs the markdown pipeline, builds with the repository-specific base href, and publishes via `actions/deploy-pages`. Ensure GitHub Pages is set to "GitHub Actions" in the repository settings.
+`.github/workflows/deploy.yml` installs dependencies, runs the markdown pipeline, builds with the repository-specific base href, and publishes via `actions/deploy-pages`. Ensure GitHub Pages is set to "GitHub Actions" in the repository settings. Deep links are handled via `src/404.html`; update the `BASE_PATH` constant inside that file if you ever change the repository name or GitHub Pages base path.

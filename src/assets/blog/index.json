@@ -1,5 +1,15 @@
 [
   {
+    "slug": "hesit-academy",
+    "title": "Heist Academy: Learning Game Development the Hard Way",
+    "description": "A retrospective on Heist Academy, a university stealth-puzzle project that became a crash course in 3D game development, teamwork, and surviving 3 a.m. Discord calls.",
+    "date": "2025-11-19",
+    "tags": [
+      "Game Development",
+      "Unity"
+    ]
+  },
+  {
     "slug": "building-with-angular",
     "title": "Building with Angular 17",
     "description": "How I approach modern Angular apps with standalone components and clean architecture.",

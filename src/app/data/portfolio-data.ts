@@ -114,15 +114,15 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             role: 'Software Engineer',
             location: 'Barcelona, Spain / Bonn, Germany',
             heading: "Hi, I'm Alex Ruiz.",
-            summary: 'Software Engineer with dual Computer Engineering and Video Game Design degrees, currently leading the front-end modernization of a financial platform while advising parallel squads.',
-            availability: 'Focused on secure, scalable solutions for teams that need reliable delivery.',
-            focusAreas: ['Front-end modernization', 'React & TypeScript', 'CI/CD leadership', 'Technical mentoring', 'Design systems'],
+            summary: 'Software Engineer with dual Computer Engineering and Video Game Design degrees, currently leading the front-end modernization of financial platforms while advising parallel squads.',
+            availability: 'Focused on the beauty of simple solutions for complex problems.',
+            focusAreas: ['Full-Stack Development', "Software Architecture", 'DevOps', 'Technical Leadership', 'Agile Delivery', 'Versatility & Cross-Discipline'],
             ctaPrimary: 'Read the blog',
             ctaSecondary: 'See projects'
         },
         projects: {
             eyebrow: 'Projects',
-            title: 'Recent initiatives',
+            title: "What I've been up to",
             intro: 'Product work blending leadership, design systems, and hands-on engineering.',
             linkLabel: 'View details',
             items: [
@@ -139,8 +139,9 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                 },
                 {
                     title: 'Heist Academy',
-                    description: 'Puzzle and stealth 3D game produced with a TecnoCampus team, showcasing Unity tooling and gameplay programming.',
-                    tech: ['Unity', 'C#', 'Game Design']
+                    description: 'A puzzle and stealth 3D game produced alongside seven team members back in university, where I acted as lead programmer. It was a bumpy ride.',
+                    tech: ['Unity', 'C#', 'Game Architecture'],
+                    link: '/blog/heist-academy'
                 }
             ]
         },

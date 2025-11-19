@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Client-side route redirect for GitHub Pages.">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        p {
+            color: #1f2933;
+        }
+    </style>
+    <script>
+        (function () {
+            var storageKey = '__GH_REDIRECT__';
+            var fullPath = window.location.pathname + window.location.search + window.location.hash;
+            try {
+                sessionStorage.setItem(storageKey, fullPath);
+            } catch (err) {
+                // Ignore storage errors (private browsing, etc.)
+            }
+
+            var BASE_PATH = '/portfolio/';
+            if (!BASE_PATH.endsWith('/')) {
+                BASE_PATH += '/';
+            }
+
+            if (window.location.pathname === BASE_PATH) {
+                return;
+            }
+
+            window.location.replace(BASE_PATH);
+        })();
+    </script>
+</head>
+
+<body>
+    <p>Routing you back to the site…</p>
+</body>
+
+</html>
