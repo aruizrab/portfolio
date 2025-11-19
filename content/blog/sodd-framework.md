@@ -11,7 +11,7 @@ tags:
 
 # From Heist Academy to a Framework
 
-[Heist Academy](./heist-academy) was the first time I really abused ScriptableObjects in Unity in the best possible way. Faced with a stealth game, one level, and effectively a one person programming department, I ended up building a small toolkit of Scriptable Events, variables and collections that let designers wire behaviour from the Inspector while I focused on architecture. At the time it felt like a survival trick. In hindsight it was the prototype of something more serious.
+[Heist Academy](./blog/heist-academy) was the first time I really abused ScriptableObjects in Unity in the best possible way. Faced with a stealth game, one level, and effectively a one person programming department, I ended up building a small toolkit of Scriptable Events, variables and collections that let designers wire behaviour from the Inspector while I focused on architecture. At the time it felt like a survival trick. In hindsight it was the prototype of something more serious.
 
 Ryan Hipple’s talk on ScriptableObject driven architectures had been sitting quietly in the back of my mind while I wired that game together. He spoke about modularity, editability and debuggability as first class engineering goals, not nice to haves. In Heist Academy I proved to myself that the pattern worked in a messy, deadline driven student project. The thesis that followed was the natural escalation: take those ideas, formalise them, and build a proper framework and workflow so that ScriptableObject Driven Development (SODD) could be a deliberate method rather than a desperate hack.
 

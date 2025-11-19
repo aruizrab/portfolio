@@ -127,15 +127,16 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             linkLabel: 'View details',
             items: [
                 {
-                    title: 'Debt Management Platform Modernization',
-                    description: "Led the redesign and rollout of a major bank's debt management platform, aligning architecture, CI/CD, and mentorship across squads.",
-                    tech: ['React', 'TypeScript', 'Redux', 'Node', 'CI/CD']
+                    title: 'GAIDGG',
+                    description: "Generative AI-Driven Game Generation. My thesis for the computer engineering side of my double degree, where I turned the virtual environment of a videogame into a sandbox for experimenting with AI's potential for revolutionizing the way videogames interact with the player.",
+                    tech: ['Generative AI', 'Unity', 'C#'],
+                    link: './blog/gaidgg'
                 },
                 {
                     title: 'SODD Framework',
                     description: 'ScriptableObject Driven Development framework for Unity that streamlines gameplay architecture for designers and engineers.',
                     tech: ['Unity', 'C#', 'Design Patterns'],
-                    link: 'https://github.com/aruizrab/sodd-unity-framework'
+                    link: './blog/sodd-framework'
                 },
                 {
                     title: 'Heist Academy',
