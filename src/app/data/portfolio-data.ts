@@ -114,7 +114,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             role: 'Software Engineer',
             location: 'Barcelona, Spain / Bonn, Germany',
             heading: "Hi, I'm Alex Ruiz.",
-            summary: 'Software Engineer with dual Computer Engineering and Video Game Design degrees, currently leading the front-end modernization of financial platforms while advising parallel squads.',
+            summary: '+4 years of experience in the tech industry and a dual Computer Engineering and Video Game Production degrees.',
             availability: 'Focused on the beauty of simple solutions for complex problems.',
             focusAreas: ['Full-Stack Development', "Software Architecture", 'DevOps', 'Technical Leadership', 'Agile Delivery', 'Versatility & Cross-Discipline'],
             ctaPrimary: 'Read the blog',
