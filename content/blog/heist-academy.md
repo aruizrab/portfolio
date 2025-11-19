@@ -7,8 +7,6 @@ tags:
   - Unity
 ---
 
-# Heist Academy: Learning Game Development the Hard Way
-
 Back in my college days of 2022, during a subject simply called “Videogame Development”, I found myself thrown into a three–month sprint that tried to compress the full lifecycle of professional game development into one trimester. The setup was deceptively simple: eight–person teams, one big 3D project, industry professionals as teachers, and a very real deadline. The result was Heist Academy, a stealth and puzzle game about pretending to steal things in a fake environment so convincingly staged that it almost felt real, especially when you failed spectacularly.
 
 This is a look back at how Heist Academy went from a vague idea to a fully playable prototype, how a relaxed classroom exercise turned into a genuine stress test, and how the project quietly seeded the architecture that would later become the basis for my SODD Framework.

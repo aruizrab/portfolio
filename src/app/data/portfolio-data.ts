@@ -141,7 +141,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     title: 'Heist Academy',
                     description: 'A puzzle and stealth 3D game produced alongside seven team members back in university, where I acted as lead programmer. It was a bumpy ride.',
                     tech: ['Unity', 'C#', 'Game Architecture'],
-                    link: '/blog/heist-academy'
+                    link: './blog/heist-academy'
                 }
             ]
         },

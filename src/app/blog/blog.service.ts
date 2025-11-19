@@ -18,6 +18,7 @@ export interface BlogPost extends BlogPostSummary {
 @Injectable({ providedIn: 'root' })
 export class BlogService {
     private posts$?: Observable<BlogPostSummary[]>;
+    private readonly frontMatterPattern = /^---[\r\n]+[\s\S]*?[\r\n]+---[\r\n]*/;
 
     constructor(private http: HttpClient) { }
 
@@ -41,8 +42,21 @@ export class BlogService {
 
                 return this.http
                     .get(`assets/blog/${slug}.md`, { responseType: 'text' })
-                    .pipe(map((content) => ({ ...post, html: marked.parse(content) as string })));
+                    .pipe(
+                        map((content) => ({
+                            ...post,
+                            html: marked.parse(this.stripFrontMatter(content)) as string
+                        }))
+                    );
             })
         );
+    }
+
+    private stripFrontMatter(markdown: string): string {
+        if (!markdown.startsWith('---')) {
+            return markdown;
+        }
+
+        return markdown.replace(this.frontMatterPattern, '').trimStart();
     }
 }
