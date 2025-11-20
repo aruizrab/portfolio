@@ -7,17 +7,17 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: 'Alex Developer - Portfolio'
+        title: 'Portfolio'
     },
     {
         path: 'blog',
         component: BlogListComponent,
-        title: 'Blog - Alex Developer'
+        title: 'Blog'
     },
     {
         path: 'blog/:slug',
         component: BlogPostComponent,
-        title: 'Blog Post - Alex Developer'
+        title: 'Blog Post'
     },
     {
         path: '**',

@@ -1,5 +1,16 @@
 [
   {
+    "slug": "gaidgg",
+    "title": "Integrating Generative Artificial Intelligence in Videogame Environments ",
+    "description": "How my second thesis took large language models, Unity, and a stubborn curiosity about AI-driven game worlds and turned them into a living sandbox of worlds and generative NPCs.",
+    "date": "2025-11-19",
+    "tags": [
+      "Generative AI",
+      "Game Development",
+      "Unity"
+    ]
+  },
+  {
     "slug": "heist-academy",
     "title": "Heist Academy: Learning Game Development the Hard Way",
     "description": "A retrospective on Heist Academy, a university stealth-puzzle project that became a crash course in 3D game development, teamwork, and surviving 3 a.m. Discord calls.",
@@ -10,23 +21,13 @@
     ]
   },
   {
-    "slug": "building-with-angular",
-    "title": "Building with Angular 17",
-    "description": "How I approach modern Angular apps with standalone components and clean architecture.",
-    "date": "2025-11-01",
+    "slug": "sodd-framework",
+    "title": "SODD Framework: Game Architecture with Unity's ScriptableObjects.",
+    "description": "How a thesis project evolved a scrappy Heist Academy prototype into a full ScriptableObject Driven Development framework for Unity, complete with tooling, CI/CD, documentation and a sample game.",
+    "date": "2025-11-19",
     "tags": [
-      "Angular",
-      "Architecture"
-    ]
-  },
-  {
-    "slug": "shipping-with-github-pages",
-    "title": "Shipping with GitHub Pages",
-    "description": "Notes on automating Angular deployments directly from GitHub Actions.",
-    "date": "2025-10-12",
-    "tags": [
-      "DevOps",
-      "GitHub Pages"
+      "Unity",
+      "SODD Framework"
     ]
   }
 ]

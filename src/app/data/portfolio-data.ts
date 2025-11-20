@@ -73,13 +73,11 @@ export interface ContactContent {
         email: string;
         location: string;
         phone: string;
-        website: string;
     };
     email: string;
     location: string;
     phone: string;
     phoneLink: string;
-    website: string;
     socials: { label: string; url: string }[];
 }
 
@@ -123,12 +121,12 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         projects: {
             eyebrow: 'Projects',
             title: "What I've been up to",
-            intro: 'Product work blending leadership, design systems, and hands-on engineering.',
+            intro: "The projects listed here are either personal or academic, I cannot disclose details of my professional work. You might notice they're all are about videogames; that's because computer engineering is my profession, but games are my hobby. When I'm done coding for a living, I keep coding for fun.",
             linkLabel: 'View details',
             items: [
                 {
                     title: 'GAIDGG',
-                    description: "Generative AI-Driven Game Generation. My thesis for the computer engineering side of my double degree, where I turned the virtual environment of a videogame into a sandbox for experimenting with AI's potential for revolutionizing the way videogames interact with the player.",
+                    description: "Generative AI-Driven Game Generation. Exploring the integration of AI for revolutionizing the way videogames interact with the player.",
                     tech: ['Generative AI', 'Unity', 'C#'],
                     link: './blog/gaidgg'
                 },
@@ -148,7 +146,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         },
         experience: {
             eyebrow: 'Experience',
-            title: "What I'm shipping",
+            title: "My journey",
             achievementLabel: 'Achievements',
             tasksLabel: 'Responsibilities',
             items: [
@@ -157,18 +155,20 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     company: 'NTT DATA Europe & Latam',
                     location: 'Barcelona · Hybrid',
                     period: 'Jun 2025 - Present',
-                    description: 'Leading the front-end track of a large bank debt management platform while coordinating integrations and releases.',
+                    description: 'Stepped up from participating in projects to leading the technical decisions of them.',
                     achievements: [
-                        "Lead front-end development of a major bank's debt management platform",
-                        'Drive architecture decisions aligned with regulatory requirements',
-                        'Mentor developers and keep delivery quality consistent across teams'
+                        "Lead front-end development of financial platform's",
                     ],
                     tasks: [
-                        'Translate business requirements into technical plans',
-                        'Manage integrations, deployments, and version releases',
-                        'Establish CI/CD workflows, code reviews, and test suites',
-                        'Analyze, document, and refactor codebases',
-                        'Mentor junior developers and support agile ceremonies'
+                        'Lead software design and architecture decisions.',
+                        'Gather business requirements from product owners and translate them into technical requirements',
+                        'Manage integrations, deployments and version releases',
+                        'Lead code reviews',
+                        'Establish development pipelines for dev teams to follow',
+                        'Write, refactor, analyze and document code',
+                        'Define and write test suites',
+                        'Work with agile methodologies',
+                        'Mentor junior developers',
                     ]
                 },
                 {
@@ -176,27 +176,30 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     company: 'NTT DATA Europe & Latam',
                     location: 'Barcelona · Hybrid',
                     period: 'Apr 2022 - May 2025',
-                    description: 'Supported migrations of the bank online shop and loan request platforms while co-designing the onboarding program for new engineers.',
+                    description: "Most of my experience came from finding myself in the middle of a major bank's large-scale modernization towards new technologies and frameworks.",
                     achievements: [
-                        "Participated in the migration of the bank's online shop and loan platforms",
-                        'Co-designed the technical onboarding program and learning modules',
-                        'Helped define best-practice guidelines for new squads'
+                        "Participated in the modernization of a major bank's applications and platforms",
+                        'Co-designed the technical onboarding program and learning modules for new recruits',
+                        'Defined best-practice guidelines for teams'
                     ],
                     tasks: [
                         'Contribute to design and architecture decisions',
                         'Gather and refine requirements from product owners',
-                        'Manage deployments, code reviews, and automation pipelines',
-                        'Maintain documentation, tests, and monitoring with ELK/Jenkins'
+                        'Manage integrations, deployments and version releases',
+                        'Lead code reviews',
+                        'Write, refactor, analyze and document code',
+                        'Define and write test suites',
+                        'Work with agile methodologies',
                     ]
                 },
                 {
-                    role: 'Software Developer (Intern)',
+                    role: 'Software Developer',
                     company: 'Conservas Dani S.A.U.',
                     location: 'Vilassar de Mar',
                     period: 'Oct 2021 - Mar 2022',
-                    description: 'Designed and developed a leave management platform for HR while providing IT support.',
+                    description: 'Proving myself from the start.',
                     achievements: [
-                        'Delivered the HR leave platform end-to-end with Python and Flask'
+                        'Singlehandedly designed, developed and delivered a leave management platform for HR.'
                     ],
                     tasks: [
                         'Maintain software based on user feedback',
@@ -220,7 +223,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     school: 'TecnoCampus',
                     program: 'BSc Video Game Design and Production',
                     period: '2018 - 2025',
-                    details: 'Gameplay programming, Unity production workflows, and collaborative projects.'
+                    details: 'Gameplay programming, production workflows, and collaborative projects.'
                 }
             ]
         },
@@ -231,14 +234,12 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             labels: {
                 email: 'Email',
                 location: 'Location',
-                phone: 'Phone',
-                website: 'Website'
+                phone: 'Phone'
             },
             email: 'a.ruiz.rabasseda@gmail.com',
             location: 'Barcelona, Spain / Bonn, Germany',
             phone: '+34 656 974 640',
             phoneLink: '+34656974640',
-            website: 'https://github.com/aruizrab',
             socials: [
                 { label: 'LinkedIn', url: 'https://linkedin.com/in/aruizrab' },
                 { label: 'GitHub', url: 'https://github.com/aruizrab' }
@@ -247,7 +248,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         blog: {
             eyebrow: 'Writing',
             title: 'Blog',
-            description: 'Field notes on modernization, tooling, and deployment workflows.',
+            description: 'Notes on anything I feel like talking about.',
             backLabel: '<- Back to posts',
             missingMessage: 'That post could not be found. Return to the blog list.'
         }
@@ -264,39 +265,41 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             role: 'Ingeniero de software',
             location: 'Barcelona, España / Bonn, Alemania',
             heading: 'Hola, soy Alex Ruiz.',
-            summary: 'Ingeniero con doble grado en Informática y Diseño de Videojuegos, liderando la modernización front-end de una plataforma financiera y apoyando a otros equipos.',
-            availability: 'Apasionado por soluciones seguras y escalables para equipos con alto impacto.',
-            focusAreas: ['Modernización front-end', 'React y TypeScript', 'Liderazgo CI/CD', 'Mentoría técnica', 'Sistemas de diseño'],
+            summary: 'Más de 4 años de experiencia en la industria tecnológica y doble grado en Ingeniería Informática y Producción de Videojuegos.',
+            availability: 'Enfocado en la belleza de las soluciones simples para problemas complejos.',
+            focusAreas: ['Desarrollo Full-Stack', 'Arquitectura de Software', 'DevOps', 'Liderazgo Técnico', 'Entrega Ágil', 'Versatilidad y Multidisciplina'],
             ctaPrimary: 'Leer el blog',
             ctaSecondary: 'Ver proyectos'
         },
         projects: {
             eyebrow: 'Proyectos',
-            title: 'Iniciativas recientes',
-            intro: 'Trabajo de producto que combina liderazgo técnico y ejecución práctica.',
+            title: 'En qué he estado trabajando',
+            intro: 'Los proyectos listados aquí son personales o académicos, ya que no puedo revelar detalles de mi trabajo profesional. Notarás que todos giran en torno a los videojuegos; la ingeniería informática es mi profesión, pero los juegos son mi afición. Cuando termino de programar para ganarme la vida, sigo programando por diversión.',
             linkLabel: 'Ver detalles',
             items: [
                 {
-                    title: 'Modernización de gestión de deuda',
-                    description: 'Dirigí el rediseño y despliegue de la plataforma de gestión de deuda de un gran banco, alineando arquitectura, CI/CD y mentoría.',
-                    tech: ['React', 'TypeScript', 'Redux', 'Node', 'CI/CD']
+                    title: 'GAIDGG',
+                    description: 'Generación de Juegos Impulsada por IA Generativa. Explorando la integración de la IA para revolucionar la forma en que los videojuegos interactúan con el jugador.',
+                    tech: ['IA Generativa', 'Unity', 'C#'],
+                    link: './blog/gaidgg'
                 },
                 {
                     title: 'SODD Framework',
                     description: 'Framework de ScriptableObject Driven Development para Unity que agiliza la arquitectura de gameplay para diseñadores e ingenieros.',
                     tech: ['Unity', 'C#', 'Patrones de diseño'],
-                    link: 'https://github.com/aruizrab/sodd-unity-framework'
+                    link: './blog/sodd-framework'
                 },
                 {
                     title: 'Heist Academy',
-                    description: 'Juego 3D de puzles e infiltración desarrollado con un equipo de TecnoCampus, demostrando dominio de Unity.',
-                    tech: ['Unity', 'C#', 'Diseño de juegos']
+                    description: 'Un juego 3D de puzles y sigilo producido junto a siete compañeros en la universidad, donde actué como programador principal. Fue un camino lleno de baches.',
+                    tech: ['Unity', 'C#', 'Arquitectura de Juegos'],
+                    link: './blog/heist-academy'
                 }
             ]
         },
         experience: {
             eyebrow: 'Experiencia',
-            title: 'Lo que estoy construyendo',
+            title: 'Mi trayectoria',
             achievementLabel: 'Logros',
             tasksLabel: 'Responsabilidades',
             items: [
@@ -305,18 +308,20 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     company: 'NTT DATA Europe & Latam',
                     location: 'Barcelona · Híbrido',
                     period: 'Jun 2025 - Actualidad',
-                    description: 'Lidero la rama front-end de una plataforma bancaria de gestión de deuda coordinando integraciones y entregas.',
+                    description: 'Pasé de participar en proyectos a liderar sus decisiones técnicas.',
                     achievements: [
-                        'Encabecé el desarrollo front-end de la plataforma de deuda del banco',
-                        'Definí decisiones arquitectónicas alineadas con normativas',
-                        'Mentoricé a desarrolladores y aseguré la calidad de entrega'
+                        'Liderar el desarrollo front-end de plataformas financieras',
                     ],
                     tasks: [
-                        'Traducir requisitos de negocio en planes técnicos',
-                        'Gestionar integraciones, despliegues y versiones',
-                        'Establecer flujos CI/CD, revisiones y suites de pruebas',
-                        'Analizar, documentar y refactorizar código',
-                        'Acompañar a perfiles junior y apoyar metodologías ágiles'
+                        'Liderar decisiones de diseño y arquitectura de software.',
+                        'Recopilar requisitos de negocio de los product owners y traducirlos a requisitos técnicos',
+                        'Gestionar integraciones, despliegues y lanzamientos de versiones',
+                        'Liderar revisiones de código',
+                        'Establecer pipelines de desarrollo para los equipos',
+                        'Escribir, refactorizar, analizar y documentar código',
+                        'Definir y escribir suites de pruebas',
+                        'Trabajar con metodologías ágiles',
+                        'Mentorizar a desarrolladores junior',
                     ]
                 },
                 {
@@ -324,27 +329,30 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     company: 'NTT DATA Europe & Latam',
                     location: 'Barcelona · Híbrido',
                     period: 'Abr 2022 - May 2025',
-                    description: 'Apoyé migraciones del e-commerce y la plataforma de préstamos del banco, además de co-diseñar el onboarding técnico.',
+                    description: 'La mayor parte de mi experiencia proviene de encontrarme en medio de la modernización a gran escala de un banco importante hacia nuevas tecnologías y frameworks.',
                     achievements: [
-                        'Participé en la migración de la tienda online y la plataforma de préstamos',
-                        'Co-diseñé el programa de onboarding y módulos de formación',
-                        'Definí guías de buenas prácticas para nuevos equipos'
+                        'Participé en la modernización de aplicaciones y plataformas de un gran banco',
+                        'Co-diseñé el programa de onboarding técnico y módulos de aprendizaje para nuevas incorporaciones',
+                        'Definí guías de mejores prácticas para los equipos'
                     ],
                     tasks: [
                         'Contribuir a decisiones de diseño y arquitectura',
-                        'Recopilar requisitos con product owners',
-                        'Gestionar despliegues, revisiones y pipelines',
-                        'Mantener documentación, pruebas y monitorización'
+                        'Recopilar y refinar requisitos con product owners',
+                        'Gestionar integraciones, despliegues y lanzamientos de versiones',
+                        'Liderar revisiones de código',
+                        'Escribir, refactorizar, analizar y documentar código',
+                        'Definir y escribir suites de pruebas',
+                        'Trabajar con metodologías ágiles',
                     ]
                 },
                 {
-                    role: 'Desarrollador de software (prácticas)',
+                    role: 'Desarrollador de software',
                     company: 'Conservas Dani S.A.U.',
                     location: 'Vilassar de Mar',
                     period: 'Oct 2021 - Mar 2022',
-                    description: 'Diseñé y desarrollé una plataforma de gestión de vacaciones para RR.HH. ofreciendo soporte TI diario.',
+                    description: 'Demostrando mi valía desde el principio.',
                     achievements: [
-                        'Entregué la plataforma de RR.HH. con Python y Flask'
+                        'Diseñé, desarrollé y entregué en solitario una plataforma de gestión de vacaciones para RR.HH.'
                     ],
                     tasks: [
                         'Mantener el software según feedback',
@@ -379,14 +387,12 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             labels: {
                 email: 'Correo',
                 location: 'Ubicación',
-                phone: 'Teléfono',
-                website: 'Sitio web'
+                phone: 'Teléfono'
             },
             email: 'a.ruiz.rabasseda@gmail.com',
             location: 'Barcelona, España / Bonn, Alemania',
             phone: '+34 656 974 640',
             phoneLink: '+34656974640',
-            website: 'https://github.com/aruizrab',
             socials: [
                 { label: 'LinkedIn', url: 'https://linkedin.com/in/aruizrab' },
                 { label: 'GitHub', url: 'https://github.com/aruizrab' }
@@ -395,7 +401,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         blog: {
             eyebrow: 'Blog',
             title: 'Escritura',
-            description: 'Notas sobre modernización, herramientas y despliegues.',
+            description: 'Notas sobre cualquier cosa de la que me apetezca hablar.',
             backLabel: '<- Volver al listado',
             missingMessage: 'No pudimos encontrar el artículo. Vuelve al blog.'
         }
@@ -412,39 +418,41 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             role: 'Softwareingenieur',
             location: 'Barcelona, Spanien / Bonn, Deutschland',
             heading: 'Hallo, ich bin Alex Ruiz.',
-            summary: 'Softwareingenieur mit Doppelstudium in Informatik und Game Design. Ich führe die Modernisierung einer Finanzplattform an und unterstütze parallele Teams.',
-            availability: 'Ich arbeite an sicheren, skalierbaren Lösungen für Teams mit hoher Wirkung.',
-            focusAreas: ['Modernisierung von Frontends', 'React und TypeScript', 'CI/CD-Führung', 'Technisches Mentoring', 'Designsysteme'],
+            summary: 'Über 4 Jahre Erfahrung in der Tech-Branche und ein Doppelabschluss in Informatik und Videospielproduktion.',
+            availability: 'Fokussiert auf die Schönheit einfacher Lösungen für komplexe Probleme.',
+            focusAreas: ['Full-Stack-Entwicklung', 'Softwarearchitektur', 'DevOps', 'Technische Führung', 'Agile Delivery', 'Vielseitigkeit & Interdisziplinarität'],
             ctaPrimary: 'Zum Blog',
             ctaSecondary: 'Zu den Projekten'
         },
         projects: {
             eyebrow: 'Projekte',
-            title: 'Aktuelle Initiativen',
-            intro: 'Produktarbeit, die technische Führung mit praktischer Umsetzung verbindet.',
+            title: 'Was ich so mache',
+            intro: 'Die hier aufgeführten Projekte sind entweder persönlich oder akademisch, da ich keine Details meiner beruflichen Arbeit preisgeben darf. Vielleicht fällt auf, dass sich alles um Videospiele dreht; Informatik ist mein Beruf, aber Spiele sind mein Hobby. Wenn ich mit dem Programmieren für den Lebensunterhalt fertig bin, programmiere ich zum Spaß weiter.',
             linkLabel: 'Details ansehen',
             items: [
                 {
-                    title: 'Modernisierung der Schuldenplattform',
-                    description: 'Leitete das Redesign und den Rollout der Schuldenplattform einer Großbank inklusive Architektur, CI/CD und Mentoring.',
-                    tech: ['React', 'TypeScript', 'Redux', 'Node', 'CI/CD']
+                    title: 'GAIDGG',
+                    description: 'Generative AI-Driven Game Generation. Erforschung der Integration von KI, um die Interaktion von Videospielen mit dem Spieler zu revolutionieren.',
+                    tech: ['Generative KI', 'Unity', 'C#'],
+                    link: './blog/gaidgg'
                 },
                 {
                     title: 'SODD Framework',
                     description: 'ScriptableObject Driven Development Framework für Unity, das die Gameplay-Architektur für Designer und Entwickler vereinfacht.',
                     tech: ['Unity', 'C#', 'Designmuster'],
-                    link: 'https://github.com/aruizrab/sodd-unity-framework'
+                    link: './blog/sodd-framework'
                 },
                 {
                     title: 'Heist Academy',
-                    description: '3D-Puzzle- und Stealth-Spiel, das mit einem TecnoCampus-Team entwickelt wurde und Unity-Expertise zeigt.',
-                    tech: ['Unity', 'C#', 'Spieldesign']
+                    description: 'Ein 3D-Puzzle- und Stealth-Spiel, das ich an der Universität zusammen mit sieben Teammitgliedern produziert habe, wobei ich als Lead Programmer fungierte. Es war eine holprige Fahrt.',
+                    tech: ['Unity', 'C#', 'Spielarchitektur'],
+                    link: './blog/heist-academy'
                 }
             ]
         },
         experience: {
             eyebrow: 'Erfahrung',
-            title: 'Woran ich arbeite',
+            title: 'Mein Werdegang',
             achievementLabel: 'Erfolge',
             tasksLabel: 'Aufgaben',
             items: [
@@ -453,18 +461,20 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     company: 'NTT DATA Europe & Latam',
                     location: 'Barcelona · Hybrid',
                     period: 'Jun 2025 - Heute',
-                    description: 'Verantworte das Frontend einer großen Bankplattform für Schuldenmanagement und koordiniere Integrationen sowie Releases.',
+                    description: 'Vom Projektteilnehmer zum technischen Entscheidungsträger aufgestiegen.',
                     achievements: [
-                        'Frontendentwicklung der Schuldenplattform angeführt',
-                        'Architekturentscheidungen mit regulatorischen Vorgaben abgestimmt',
-                        'Teams betreut und Codequalität abgesichert'
+                        'Leitung der Frontend-Entwicklung von Finanzplattformen',
                     ],
                     tasks: [
-                        'Geschäftsanforderungen in technische Pläne übersetzen',
-                        'Integrationen, Deployments und Versionen steuern',
-                        'CI/CD-Pipelines, Reviews und Tests etablieren',
-                        'Code analysieren, dokumentieren und refaktorieren',
-                        'Junioren coachen und agile Prozesse begleiten'
+                        'Leitung von Software-Design- und Architekturentscheidungen.',
+                        'Geschäftsanforderungen von Product Ownern sammeln und in technische Anforderungen übersetzen',
+                        'Management von Integrationen, Deployments und Versionsfreigaben',
+                        'Leitung von Code-Reviews',
+                        'Etablierung von Entwicklungspipelines für die Teams',
+                        'Code schreiben, refaktorisieren, analysieren und dokumentieren',
+                        'Test-Suites definieren und schreiben',
+                        'Arbeiten mit agilen Methoden',
+                        'Mentoring von Junior-Entwicklern',
                     ]
                 },
                 {
@@ -472,27 +482,30 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                     company: 'NTT DATA Europe & Latam',
                     location: 'Barcelona · Hybrid',
                     period: 'Apr 2022 - Mai 2025',
-                    description: 'Unterstützte die Migration des Online-Shops und der Kreditplattform und gestaltete das technische Onboarding mit.',
+                    description: 'Der Großteil meiner Erfahrung stammt aus der groß angelegten Modernisierung einer Großbank hin zu neuen Technologien und Frameworks.',
                     achievements: [
-                        'Migration der Shop- und Kreditplattform unterstützt',
-                        'Onboarding-Programm und Lernmodule mitgestaltet',
-                        'Best-Practice-Guidelines für neue Teams erstellt'
+                        'Beteiligt an der Modernisierung von Anwendungen und Plattformen einer Großbank',
+                        'Mitgestaltung des technischen Onboarding-Programms und der Lernmodule für neue Mitarbeiter',
+                        'Definition von Best-Practice-Richtlinien für Teams'
                     ],
                     tasks: [
-                        'An Architektur- und Designentscheidungen mitwirken',
-                        'Anforderungen mit Product Ownern abstimmen',
-                        'Deployments, Reviews und Pipelines betreuen',
-                        'Dokumentation, Tests und Monitoring pflegen'
+                        'Beitrag zu Design- und Architekturentscheidungen',
+                        'Anforderungen mit Product Ownern sammeln und verfeinern',
+                        'Management von Integrationen, Deployments und Versionsfreigaben',
+                        'Leitung von Code-Reviews',
+                        'Code schreiben, refaktorisieren, analysieren und dokumentieren',
+                        'Test-Suites definieren und schreiben',
+                        'Arbeiten mit agilen Methoden'
                     ]
                 },
                 {
-                    role: 'Softwareentwickler (Praktikum)',
+                    role: 'Softwareentwickler',
                     company: 'Conservas Dani S.A.U.',
                     location: 'Vilassar de Mar',
                     period: 'Okt 2021 - Mär 2022',
-                    description: 'Entwickelte eine Urlaubsverwaltungsplattform für HR und übernahm IT-Support.',
+                    description: 'Von Anfang an bewiesen.',
                     achievements: [
-                        'HR-Plattform komplett mit Python und Flask umgesetzt'
+                        'Eigenständiges Design, Entwicklung und Bereitstellung einer Urlaubsverwaltungsplattform für die Personalabteilung.'
                     ],
                     tasks: [
                         'Software nach Feedback pflegen',
@@ -527,14 +540,12 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             labels: {
                 email: 'E-Mail',
                 location: 'Standort',
-                phone: 'Telefon',
-                website: 'Webseite'
+                phone: 'Telefon'
             },
             email: 'a.ruiz.rabasseda@gmail.com',
             location: 'Barcelona, Spanien / Bonn, Deutschland',
             phone: '+34 656 974 640',
             phoneLink: '+34656974640',
-            website: 'https://github.com/aruizrab',
             socials: [
                 { label: 'LinkedIn', url: 'https://linkedin.com/in/aruizrab' },
                 { label: 'GitHub', url: 'https://github.com/aruizrab' }

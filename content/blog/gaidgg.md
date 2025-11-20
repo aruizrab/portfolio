@@ -50,6 +50,8 @@ Given more time, this approach could be applied to wave function collapse for AI
 
 ## Generative NPCs and Cognitive Architecture
 
+The second (and most complex) component of the project was the development of AI-driven NPCs. Here I leaned heavily on the “Generative Agents” research from Google, where a small town of LLM-driven inhabitants lived their simulated lives, formed memories, reflected on them, and planned their days. I wanted that level of believability, but in a world where agents could interact with the environment like players do: pick up items, craft tools, build chests, steal from each other, and get in fights if necessary.
+
 That required an AI brain architecture with several key components. At the base, the game world provides agents with a clear ontology: persons, objects, items, stats (health, nutrition, wakefulness), a global game clock, and a fairly rich command language. Commands like `inspect`, `scan`, `walk`, `follow`, `attack`, `heal`, `craft`, `give`, `take`, `equip`, `place` and others define everything an agent can actually do. Humans call these via keyboard and mouse; AI agents output them as text.
 
 On top of that, each agent has its own internal structures: an event buffer where new perceptions arrive; a consciousness stream that tracks the recent flow of thoughts, dialogues and actions; a short-term memory that summarises this stream; and a long-term memory store containing older experiences and knowledge, indexed with embeddings for semantic search.

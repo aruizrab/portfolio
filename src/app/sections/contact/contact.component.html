@@ -12,11 +12,9 @@
         <p [appRevealOnScroll]="5"><strong>{{ contact().labels.phone }}: </strong> <a
                 [href]="'tel:' + contact().phoneLink">{{ contact().phone
                 }}</a></p>
-        <p [appRevealOnScroll]="6"><strong>{{ contact().labels.website }}: </strong> <a [href]="contact().website"
-                target="_blank" rel="noopener">{{ contact().website }}</a></p>
         <ul class="socials">
             @for (item of contact().socials; track item.label; let idx = $index) {
-            <li [appRevealOnScroll]="7 + idx"><a [href]="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
+            <li [appRevealOnScroll]="6 + idx"><a [href]="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
             </li>
             }
         </ul>
