@@ -11,24 +11,11 @@
                 <h3>{{ job.role }} - {{ job.company }}</h3>
             </header>
             <p>{{ job.description }}</p>
-            <div class="experience__lists">
-                <div>
-                    <p class="eyebrow">{{ experience().achievementLabel }}</p>
-                    <ul>
-                        @for (item of job.achievements; track item; let achIdx = $index) {
-                        <li [appRevealOnScroll]="3 + idx + (achIdx * 0.1)">{{ item }}</li>
-                        }
-                    </ul>
-                </div>
-                <div>
-                    <p class="eyebrow">{{ experience().tasksLabel }}</p>
-                    <ul>
-                        @for (task of job.tasks; track task; let taskIdx = $index) {
-                        <li [appRevealOnScroll]="4 + idx + (taskIdx * 0.1)">{{ task }}</li>
-                        }
-                    </ul>
-                </div>
-            </div>
+            <ul>
+                @for (item of job.bullets; track item; let itemIdx = $index) {
+                <li [appRevealOnScroll]="3 + idx + (itemIdx * 0.1)">{{ item }}</li>
+                }
+            </ul>
         </article>
         }
     </div>

@@ -9,9 +9,11 @@
                 [href]="'mailto:' + contact().email">{{ contact().email
                 }}</a></p>
         <p [appRevealOnScroll]="4"><strong>{{ contact().labels.location }}:</strong> {{ contact().location }}</p>
-        <p [appRevealOnScroll]="5"><strong>{{ contact().labels.phone }}: </strong> <a
-                [href]="'tel:' + contact().phoneLink">{{ contact().phone
-                }}</a></p>
+        <p [appRevealOnScroll]="5"><strong>{{ contact().labels.phone }}: </strong>
+            @for (phone of contact().phones; track phone.display; let last = $last) {
+            <a [href]="'tel:' + phone.link">{{ phone.display }}</a>{{ !last ? ' / ' : '' }}
+            }
+        </p>
         <ul class="socials">
             @for (item of contact().socials; track item.label; let idx = $index) {
             <li [appRevealOnScroll]="6 + idx"><a [href]="item.url" target="_blank" rel="noopener">{{ item.label }}</a>

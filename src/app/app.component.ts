@@ -39,18 +39,28 @@ export class AppComponent {
     return this.languageOptions.find((opt) => opt.code === code) ?? this.languageOptions[0];
   });
   readonly otherLanguages = computed(() => this.languageOptions.filter((opt) => opt.code !== this.currentLanguage().code));
-  readonly menuOpen = signal(false);
+  readonly languageMenuOpen = signal(false);
+  readonly mobileMenuOpen = signal(false);
   readonly theme = this.themeService.theme;
   readonly themeToggleAriaLabel = computed(() => `Toggle theme (current: ${this.theme()})`);
   readonly themeToggleId = 'theme-toggle';
 
   toggleLanguageMenu(): void {
-    this.menuOpen.update((open) => !open);
+    this.languageMenuOpen.update((open) => !open);
+  }
+
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen.update((open) => !open);
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpen.set(false);
   }
 
   selectLanguage(code: LanguageCode): void {
     this.languageService.setLanguage(code);
-    this.menuOpen.set(false);
+    this.languageMenuOpen.set(false);
+    this.closeMobileMenu();
   }
 
   setThemeFromToggle(checked: boolean): void {
@@ -68,15 +78,16 @@ export class AppComponent {
 
   @HostListener('document:click', ['$event'])
   closeOnOutsideClick(event: Event): void {
-    if (!this.menuOpen()) {
-      return;
-    }
-
     const target = event.target as HTMLElement | null;
-    if (target?.closest('.language-switcher')) {
-      return;
+
+    // Close language menu if clicked outside
+    if (this.languageMenuOpen() && !target?.closest('.language-switcher')) {
+      this.languageMenuOpen.set(false);
     }
 
-    this.menuOpen.set(false);
+    // Close mobile menu if clicked outside (and not on the toggle button)
+    if (this.mobileMenuOpen() && !target?.closest('.mobile-menu-toggle') && !target?.closest('.nav-wrapper')) {
+      this.mobileMenuOpen.set(false);
+    }
   }
 }

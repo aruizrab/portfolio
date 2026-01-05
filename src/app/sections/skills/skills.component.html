@@ -1,0 +1,15 @@
+<section id="skills" class="section">
+    <div class="section__heading">
+        <p class="eyebrow" [appRevealOnScroll]="0">{{ skills().eyebrow }}</p>
+        <h2 [appRevealOnScroll]="1">{{ skills().title }}</h2>
+        <p [appRevealOnScroll]="1.5">{{ skills().subtitle }}</p>
+    </div>
+    <div class="skills-grid">
+        @for (skill of skills().items; track skill.name; let idx = $index) {
+        <div class="skill-badge" [appRevealOnScroll]="2 + (idx * 0.05)">
+            <img [src]="skill.icon" [alt]="skill.name" width="24" height="24" loading="lazy">
+            <span>{{ skill.name }}</span>
+        </div>
+        }
+    </div>
+</section>

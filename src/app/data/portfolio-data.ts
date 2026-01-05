@@ -3,6 +3,7 @@ export type LanguageCode = 'en' | 'es' | 'de';
 export interface NavigationLabels {
     projects: string;
     experience: string;
+    skills: string;
     blog: string;
     contact: string;
 }
@@ -40,15 +41,12 @@ export interface ExperienceItem {
     location: string;
     period: string;
     description: string;
-    achievements: string[];
-    tasks: string[];
+    bullets: string[];
 }
 
 export interface ExperienceSection {
     eyebrow: string;
     title: string;
-    achievementLabel: string;
-    tasksLabel: string;
     items: ExperienceItem[];
 }
 
@@ -65,6 +63,18 @@ export interface EducationSection {
     items: EducationItem[];
 }
 
+export interface SkillItem {
+    name: string;
+    icon: string;
+}
+
+export interface SkillsSection {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    items: SkillItem[];
+}
+
 export interface ContactContent {
     eyebrow: string;
     title: string;
@@ -76,8 +86,7 @@ export interface ContactContent {
     };
     email: string;
     location: string;
-    phone: string;
-    phoneLink: string;
+    phones: { display: string; link: string }[];
     socials: { label: string; url: string }[];
 }
 
@@ -95,15 +104,52 @@ export interface PortfolioData {
     projects: ProjectsSection;
     experience: ExperienceSection;
     education: EducationSection;
+    skills: SkillsSection;
     contact: ContactContent;
     blog: BlogContent;
 }
+
+const SKILLS_LIST: SkillItem[] = [
+    { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
+    { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+    { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+    { name: 'Kotlin', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg' },
+    { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+    { name: 'C#', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' },
+    { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+    { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg' },
+    { name: 'Vue', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg' },
+    { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
+    { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
+    { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+    { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
+    { name: 'Django', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg' },
+    { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
+    { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg' },
+    { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+    { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
+    { name: 'Jenkins', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg' },
+    { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg' },
+    { name: 'Flask', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg' },
+    { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' },
+    { name: 'GitLab', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg' },
+    { name: 'Unity', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg' },
+    { name: 'OpenRouter', icon: 'assets/icons/openrouter.svg' },
+    { name: 'GitHub Copilot', icon: 'https://www.vectorlogo.zone/logos/github_copilot/github_copilot-icon.svg' },
+    { name: 'LLMs', icon: 'https://www.svgrepo.com/show/431962/sparkles.svg' },
+    { name: 'jQuery', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg' },
+    { name: 'JUnit', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg' },
+    { name: 'Jest', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg' },
+    { name: 'Pytest', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original.svg' },
+    { name: 'Elastic Stack', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg' }
+];
 
 export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
     en: {
         navigation: {
             projects: 'Projects',
             experience: 'Experience',
+            skills: 'Skills',
             blog: 'Blog',
             contact: 'Contact'
         },
@@ -121,7 +167,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         projects: {
             eyebrow: 'Projects',
             title: "What I've been up to",
-            intro: "The projects listed here are either personal or academic, I cannot disclose details of my professional work. You might notice they're all are about videogames; that's because computer engineering is my profession, but games are my hobby. When I'm done coding for a living, I keep coding for fun.",
+            intro: "The projects listed here are either personal or academic, I cannot disclose details of my professional work. You might notice they're all about videogames; that's because computer engineering is my profession, but games are my hobby. When I'm done coding for a living, I keep coding for fun.",
             linkLabel: 'View details',
             items: [
                 {
@@ -147,64 +193,66 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         experience: {
             eyebrow: 'Experience',
             title: "My journey",
-            achievementLabel: 'Achievements',
-            tasksLabel: 'Responsibilities',
             items: [
                 {
-                    role: 'Software Engineer',
-                    company: 'NTT DATA Europe & Latam',
-                    location: 'Barcelona · Hybrid',
-                    period: 'Jun 2025 - Present',
-                    description: 'Stepped up from participating in projects to leading the technical decisions of them.',
-                    achievements: [
-                        "Lead front-end development of financial platform's",
-                    ],
-                    tasks: [
-                        'Lead software design and architecture decisions.',
-                        'Gather business requirements from product owners and translate them into technical requirements',
-                        'Manage integrations, deployments and version releases',
-                        'Lead code reviews',
-                        'Establish development pipelines for dev teams to follow',
-                        'Write, refactor, analyze and document code',
-                        'Define and write test suites',
-                        'Work with agile methodologies',
-                        'Mentor junior developers',
+                    role: 'Senior Software Engineer',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, Spain',
+                    period: 'Jul 2024 - Present',
+                    description: 'Leading front-end development and technical decisions for critical banking applications.',
+                    bullets: [
+                        'Led front-end (React) development of a debt management application for Caixabank.',
+                        'Led front-end (React) development of an investment advisory order execution application for high-net-worth individuals under MiFID-II regulations.',
+                        'Co-designed technical onboarding and training programs for new engineers as part of Caixabank\'s expert league.',
+                        'Defined and enforced reference architectures, coding standards and best practices across teams.',
+                        'Led code reviews, PR approvals, feature integrations, and version releases across multiple projects and environments.',
+                        'Served as reference for AI integration in development workflows and tooling as part of Caixabank\'s expert league.',
+                        'Worked within Agile (Scrum/Kanban) frameworks.'
+                    ]
+                },
+                {
+                    role: 'Mid-Level Software Engineer',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, Spain',
+                    period: 'Jul 2023 - Jun 2024',
+                    description: 'Migrated legacy systems to modern microservices architecture and improved development quality standards.',
+                    bullets: [
+                        'Migrated Caixabank\'s e-shop from legacy Java/JSP stack into modular Spring Boot microservices and React front-end.',
+                        'Proposed architectural improvements, quality standards, best practices and development workflows that were adopted by seniors and tech leads.',
+                        'Led code reviews, PR approvals, and feature integration for new versions.',
+                        'Deployed and released new versions across environments through Gitlab CI/CD pipelines and Jenkins.',
+                        'Employed Elastic Stack and dashboards to monitor server logs and tracking issues.',
+                        'Collaborated closely with stakeholders to align technical solutions with business needs.',
+                        'Worked within Agile (Scrum) frameworks.'
                     ]
                 },
                 {
                     role: 'Junior Software Engineer',
-                    company: 'NTT DATA Europe & Latam',
-                    location: 'Barcelona · Hybrid',
-                    period: 'Apr 2022 - May 2025',
-                    description: "Most of my experience came from finding myself in the middle of a major bank's large-scale modernization towards new technologies and frameworks.",
-                    achievements: [
-                        "Participated in the modernization of a major bank's applications and platforms",
-                        'Co-designed the technical onboarding program and learning modules for new recruits',
-                        'Defined best-practice guidelines for teams'
-                    ],
-                    tasks: [
-                        'Contribute to design and architecture decisions',
-                        'Gather and refine requirements from product owners',
-                        'Manage integrations, deployments and version releases',
-                        'Lead code reviews',
-                        'Write, refactor, analyze and document code',
-                        'Define and write test suites',
-                        'Work with agile methodologies',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, Spain',
+                    period: 'Apr 2022 - Jun 2023',
+                    description: 'Developed features and maintained legacy applications while learning enterprise workflows.',
+                    bullets: [
+                        'Rebuilt the e-shop\'s main landing page.',
+                        'Developed new features and fixed bugs for Caixabank\'s e-shop (legacy stack).',
+                        'Participated in refinement, planning, reviews and retrospectives with client stakeholders.',
+                        'Wrote and maintained unit tests.',
+                        'Performed code reviews and pair programming with senior developers.',
+                        'Worked within Agile (Scrum) frameworks.'
                     ]
                 },
                 {
-                    role: 'Software Developer',
+                    role: 'Software Developer Intern',
                     company: 'Conservas Dani S.A.U.',
-                    location: 'Vilassar de Mar',
+                    location: 'Vilassar de Mar, Spain',
                     period: 'Oct 2021 - Mar 2022',
-                    description: 'Proving myself from the start.',
-                    achievements: [
-                        'Singlehandedly designed, developed and delivered a leave management platform for HR.'
-                    ],
-                    tasks: [
-                        'Maintain software based on user feedback',
-                        'Add new features and fix bugs quickly',
-                        'Provide day-to-day IT support for employees'
+                    description: 'Developed internal tools for HR and employees.',
+                    bullets: [
+                        'Developed a leave management web platform for HR to manage employee leave requests.',
+                        'Led the development of the company\'s intranet platform for employees.',
+                        'Gathered requirements directly from the HR manager and iterated on MVP feedback.',
+                        'Maintained applications and implemented features based on user feedback from ~200 employees.',
+                        'Participated in a data processing project collecting physical sensor data from cargo transport.'
                     ]
                 }
             ]
@@ -227,6 +275,12 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                 }
             ]
         },
+        skills: {
+            eyebrow: 'Skills',
+            title: 'Technologies I work with',
+            subtitle: "Though I'm always learning new ones",
+            items: SKILLS_LIST
+        },
         contact: {
             eyebrow: 'Contact',
             title: "Let's build together",
@@ -238,8 +292,10 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             },
             email: 'a.ruiz.rabasseda@gmail.com',
             location: 'Barcelona, Spain / Bonn, Germany',
-            phone: '+34 656 974 640',
-            phoneLink: '+34656974640',
+            phones: [
+                { display: '+34 656 974 640', link: '+34656974640' },
+                { display: '+49 170 430 5441', link: '+491704305441' }
+            ],
             socials: [
                 { label: 'LinkedIn', url: 'https://linkedin.com/in/aruizrab' },
                 { label: 'GitHub', url: 'https://github.com/aruizrab' }
@@ -257,6 +313,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         navigation: {
             projects: 'Proyectos',
             experience: 'Experiencia',
+            skills: 'Habilidades',
             blog: 'Blog',
             contact: 'Contacto'
         },
@@ -300,64 +357,66 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         experience: {
             eyebrow: 'Experiencia',
             title: 'Mi trayectoria',
-            achievementLabel: 'Logros',
-            tasksLabel: 'Responsabilidades',
             items: [
                 {
-                    role: 'Ingeniero de software',
-                    company: 'NTT DATA Europe & Latam',
-                    location: 'Barcelona · Híbrido',
-                    period: 'Jun 2025 - Actualidad',
-                    description: 'Pasé de participar en proyectos a liderar sus decisiones técnicas.',
-                    achievements: [
-                        'Liderar el desarrollo front-end de plataformas financieras',
-                    ],
-                    tasks: [
-                        'Liderar decisiones de diseño y arquitectura de software.',
-                        'Recopilar requisitos de negocio de los product owners y traducirlos a requisitos técnicos',
-                        'Gestionar integraciones, despliegues y lanzamientos de versiones',
-                        'Liderar revisiones de código',
-                        'Establecer pipelines de desarrollo para los equipos',
-                        'Escribir, refactorizar, analizar y documentar código',
-                        'Definir y escribir suites de pruebas',
-                        'Trabajar con metodologías ágiles',
-                        'Mentorizar a desarrolladores junior',
+                    role: 'Ingeniero de Software Senior',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, España',
+                    period: 'Jul 2024 - Actualidad',
+                    description: 'Liderando el desarrollo front-end y las decisiones técnicas para aplicaciones bancarias críticas.',
+                    bullets: [
+                        'Lideré el desarrollo front-end (React) de una aplicación de gestión de deuda para Caixabank.',
+                        'Lideré el desarrollo front-end (React) de una aplicación de ejecución de órdenes de asesoramiento de inversión para individuos de alto patrimonio bajo regulaciones MiFID-II.',
+                        'Co-diseñé programas de incorporación técnica y formación para nuevos ingenieros como parte de la liga de expertos de Caixabank.',
+                        'Definí e impuse arquitecturas de referencia, estándares de código y mejores prácticas en los equipos.',
+                        'Lideré revisiones de código, aprobaciones de PR, integraciones de funcionalidades y lanzamientos de versiones en múltiples proyectos y entornos.',
+                        'Serví como referencia para la integración de IA en flujos de trabajo de desarrollo y herramientas como parte de la liga de expertos de Caixabank.',
+                        'Trabajé dentro de marcos Agile (Scrum/Kanban).'
                     ]
                 },
                 {
-                    role: 'Ingeniero de software junior',
-                    company: 'NTT DATA Europe & Latam',
-                    location: 'Barcelona · Híbrido',
-                    period: 'Abr 2022 - May 2025',
-                    description: 'La mayor parte de mi experiencia proviene de encontrarme en medio de la modernización a gran escala de un banco importante hacia nuevas tecnologías y frameworks.',
-                    achievements: [
-                        'Participé en la modernización de aplicaciones y plataformas de un gran banco',
-                        'Co-diseñé el programa de onboarding técnico y módulos de aprendizaje para nuevas incorporaciones',
-                        'Definí guías de mejores prácticas para los equipos'
-                    ],
-                    tasks: [
-                        'Contribuir a decisiones de diseño y arquitectura',
-                        'Recopilar y refinar requisitos con product owners',
-                        'Gestionar integraciones, despliegues y lanzamientos de versiones',
-                        'Liderar revisiones de código',
-                        'Escribir, refactorizar, analizar y documentar código',
-                        'Definir y escribir suites de pruebas',
-                        'Trabajar con metodologías ágiles',
+                    role: 'Ingeniero de Software Mid-Level',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, España',
+                    period: 'Jul 2023 - Jun 2024',
+                    description: 'Migré sistemas heredados a una arquitectura moderna de microservicios y mejoré los estándares de calidad de desarrollo.',
+                    bullets: [
+                        'Migré la tienda electrónica de Caixabank de una pila heredada Java/JSP a microservicios modulares Spring Boot y front-end React.',
+                        'Propuse mejoras arquitectónicas, estándares de calidad, mejores prácticas y flujos de trabajo de desarrollo que fueron adoptados por seniors y líderes técnicos.',
+                        'Lideré revisiones de código, aprobaciones de PR e integración de funcionalidades para nuevas versiones.',
+                        'Desplegué y lancé nuevas versiones en entornos a través de pipelines CI/CD de Gitlab y Jenkins.',
+                        'Empleé Elastic Stack y paneles para monitorear registros de servidores y rastrear problemas.',
+                        'Colaboré estrechamente con las partes interesadas para alinear las soluciones técnicas con las necesidades del negocio.',
+                        'Trabajé dentro de marcos Agile (Scrum).'
                     ]
                 },
                 {
-                    role: 'Desarrollador de software',
+                    role: 'Ingeniero de Software Junior',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, España',
+                    period: 'Abr 2022 - Jun 2023',
+                    description: 'Desarrollé funcionalidades y mantuve aplicaciones heredadas mientras aprendía flujos de trabajo empresariales.',
+                    bullets: [
+                        'Reconstruí la página de aterrizaje principal de la tienda electrónica.',
+                        'Desarrollé nuevas funcionalidades y corregí errores para la tienda electrónica de Caixabank (pila heredada).',
+                        'Participé en refinamiento, planificación, revisiones y retrospectivas con las partes interesadas del cliente.',
+                        'Escribí y mantuve pruebas unitarias.',
+                        'Realicé revisiones de código y programación en pareja con desarrolladores senior.',
+                        'Trabajé dentro de marcos Agile (Scrum).'
+                    ]
+                },
+                {
+                    role: 'Becario de Desarrollo de Software',
                     company: 'Conservas Dani S.A.U.',
-                    location: 'Vilassar de Mar',
+                    location: 'Vilassar de Mar, España',
                     period: 'Oct 2021 - Mar 2022',
-                    description: 'Demostrando mi valía desde el principio.',
-                    achievements: [
-                        'Diseñé, desarrollé y entregué en solitario una plataforma de gestión de vacaciones para RR.HH.'
-                    ],
-                    tasks: [
-                        'Mantener el software según feedback',
-                        'Añadir nuevas funcionalidades y corregir errores',
-                        'Dar soporte TI a empleados'
+                    description: 'Desarrollé herramientas internas para RRHH y empleados.',
+                    bullets: [
+                        'Desarrollé una plataforma web de gestión de permisos para que RRHH gestione las solicitudes de permisos de los empleados.',
+                        'Lideré el desarrollo de la plataforma intranet de la empresa para los empleados.',
+                        'Recopilé requisitos directamente del gerente de RRHH e iteré sobre la retroalimentación del MVP.',
+                        'Mantuve aplicaciones e implementé funcionalidades basadas en la retroalimentación de ~200 empleados.',
+                        'Participé en un proyecto de procesamiento de datos recolectando datos de sensores físicos del transporte de carga.'
                     ]
                 }
             ]
@@ -380,6 +439,12 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                 }
             ]
         },
+        skills: {
+            eyebrow: 'Habilidades',
+            title: 'Tecnologías con las que trabajo',
+            subtitle: 'Aunque siempre estoy aprendiendo nuevas',
+            items: SKILLS_LIST
+        },
         contact: {
             eyebrow: 'Contacto',
             title: 'Construyamos juntos',
@@ -391,8 +456,10 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             },
             email: 'a.ruiz.rabasseda@gmail.com',
             location: 'Barcelona, España / Bonn, Alemania',
-            phone: '+34 656 974 640',
-            phoneLink: '+34656974640',
+            phones: [
+                { display: '+34 656 974 640', link: '+34656974640' },
+                { display: '+49 170 430 5441', link: '+491704305441' }
+            ],
             socials: [
                 { label: 'LinkedIn', url: 'https://linkedin.com/in/aruizrab' },
                 { label: 'GitHub', url: 'https://github.com/aruizrab' }
@@ -410,6 +477,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         navigation: {
             projects: 'Projekte',
             experience: 'Erfahrung',
+            skills: 'Fähigkeiten',
             blog: 'Blog',
             contact: 'Kontakt'
         },
@@ -453,64 +521,66 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
         experience: {
             eyebrow: 'Erfahrung',
             title: 'Mein Werdegang',
-            achievementLabel: 'Erfolge',
-            tasksLabel: 'Aufgaben',
             items: [
                 {
-                    role: 'Softwareingenieur',
-                    company: 'NTT DATA Europe & Latam',
-                    location: 'Barcelona · Hybrid',
-                    period: 'Jun 2025 - Heute',
-                    description: 'Vom Projektteilnehmer zum technischen Entscheidungsträger aufgestiegen.',
-                    achievements: [
-                        'Leitung der Frontend-Entwicklung von Finanzplattformen',
-                    ],
-                    tasks: [
-                        'Leitung von Software-Design- und Architekturentscheidungen.',
-                        'Geschäftsanforderungen von Product Ownern sammeln und in technische Anforderungen übersetzen',
-                        'Management von Integrationen, Deployments und Versionsfreigaben',
-                        'Leitung von Code-Reviews',
-                        'Etablierung von Entwicklungspipelines für die Teams',
-                        'Code schreiben, refaktorisieren, analysieren und dokumentieren',
-                        'Test-Suites definieren und schreiben',
-                        'Arbeiten mit agilen Methoden',
-                        'Mentoring von Junior-Entwicklern',
+                    role: 'Senior Softwareingenieur',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, Spanien',
+                    period: 'Jul 2024 - Heute',
+                    description: 'Leitung der Frontend-Entwicklung und technischer Entscheidungen für kritische Bankanwendungen.',
+                    bullets: [
+                        'Leitung der Frontend-Entwicklung (React) einer Schuldenmanagement-Anwendung für Caixabank.',
+                        'Leitung der Frontend-Entwicklung (React) einer Anwendung zur Ausführung von Anlageberatungsaufträgen für vermögende Privatkunden gemäß MiFID-II-Vorschriften.',
+                        'Mitgestaltung von technischen Onboarding- und Schulungsprogrammen für neue Ingenieure als Teil der Expertenliga von Caixabank.',
+                        'Definition und Durchsetzung von Referenzarchitekturen, Codierungsstandards und Best Practices in den Teams.',
+                        'Leitung von Code-Reviews, PR-Genehmigungen, Feature-Integrationen und Versionsfreigaben über mehrere Projekte und Umgebungen hinweg.',
+                        'Referenzperson für KI-Integration in Entwicklungsabläufe und Tools als Teil der Expertenliga von Caixabank.',
+                        'Arbeit in agilen Frameworks (Scrum/Kanban).'
                     ]
                 },
                 {
-                    role: 'Junior Software Engineer',
-                    company: 'NTT DATA Europe & Latam',
-                    location: 'Barcelona · Hybrid',
-                    period: 'Apr 2022 - Mai 2025',
-                    description: 'Der Großteil meiner Erfahrung stammt aus der groß angelegten Modernisierung einer Großbank hin zu neuen Technologien und Frameworks.',
-                    achievements: [
-                        'Beteiligt an der Modernisierung von Anwendungen und Plattformen einer Großbank',
-                        'Mitgestaltung des technischen Onboarding-Programms und der Lernmodule für neue Mitarbeiter',
-                        'Definition von Best-Practice-Richtlinien für Teams'
-                    ],
-                    tasks: [
-                        'Beitrag zu Design- und Architekturentscheidungen',
-                        'Anforderungen mit Product Ownern sammeln und verfeinern',
-                        'Management von Integrationen, Deployments und Versionsfreigaben',
-                        'Leitung von Code-Reviews',
-                        'Code schreiben, refaktorisieren, analysieren und dokumentieren',
-                        'Test-Suites definieren und schreiben',
-                        'Arbeiten mit agilen Methoden'
+                    role: 'Softwareingenieur (Mid-Level)',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, Spanien',
+                    period: 'Jul 2023 - Jun 2024',
+                    description: 'Migration von Altsystemen auf moderne Microservices-Architektur und Verbesserung der Entwicklungsqualitätsstandards.',
+                    bullets: [
+                        'Migration des E-Shops von Caixabank vom alten Java/JSP-Stack zu modularen Spring Boot-Microservices und React-Frontend.',
+                        'Vorschlag von Architekturverbesserungen, Qualitätsstandards, Best Practices und Entwicklungsabläufen, die von Senioren und technischen Leitern übernommen wurden.',
+                        'Leitung von Code-Reviews, PR-Genehmigungen und Feature-Integration für neue Versionen.',
+                        'Bereitstellung und Veröffentlichung neuer Versionen in verschiedenen Umgebungen über Gitlab CI/CD-Pipelines und Jenkins.',
+                        'Einsatz von Elastic Stack und Dashboards zur Überwachung von Serverprotokollen und zur Problemverfolgung.',
+                        'Enge Zusammenarbeit mit Stakeholdern, um technische Lösungen an den Geschäftsanforderungen auszurichten.',
+                        'Arbeit in agilen Frameworks (Scrum).'
                     ]
                 },
                 {
-                    role: 'Softwareentwickler',
+                    role: 'Junior Softwareingenieur',
+                    company: 'NTT DATA Europe & Latam S.L.',
+                    location: 'Barcelona, Spanien',
+                    period: 'Apr 2022 - Jun 2023',
+                    description: 'Entwicklung von Funktionen und Wartung von Altanwendungen bei gleichzeitigem Erlernen von Unternehmensabläufen.',
+                    bullets: [
+                        'Neuaufbau der Haupt-Landingpage des E-Shops.',
+                        'Entwicklung neuer Funktionen und Fehlerbehebung für den E-Shop von Caixabank (Legacy-Stack).',
+                        'Teilnahme an Refinement, Planung, Reviews und Retrospektiven mit Kunden-Stakeholdern.',
+                        'Schreiben und Warten von Unit-Tests.',
+                        'Durchführung von Code-Reviews und Pair Programming mit Senior-Entwicklern.',
+                        'Arbeit in agilen Frameworks (Scrum).'
+                    ]
+                },
+                {
+                    role: 'Softwareentwickler-Praktikant',
                     company: 'Conservas Dani S.A.U.',
-                    location: 'Vilassar de Mar',
+                    location: 'Vilassar de Mar, Spanien',
                     period: 'Okt 2021 - Mär 2022',
-                    description: 'Von Anfang an bewiesen.',
-                    achievements: [
-                        'Eigenständiges Design, Entwicklung und Bereitstellung einer Urlaubsverwaltungsplattform für die Personalabteilung.'
-                    ],
-                    tasks: [
-                        'Software nach Feedback pflegen',
-                        'Neue Funktionen liefern und Bugs beheben',
-                        'IT-Support für Mitarbeitende leisten'
+                    description: 'Entwicklung interner Tools für HR und Mitarbeiter.',
+                    bullets: [
+                        'Entwicklung einer Webplattform für das Urlaubsmanagement, damit die Personalabteilung Urlaubsanträge von Mitarbeitern verwalten kann.',
+                        'Leitung der Entwicklung der Intranet-Plattform des Unternehmens für Mitarbeiter.',
+                        'Erfassung von Anforderungen direkt vom HR-Manager und Iteration basierend auf MVP-Feedback.',
+                        'Wartung von Anwendungen und Implementierung von Funktionen basierend auf Benutzerfeedback von ca. 200 Mitarbeitern.',
+                        'Teilnahme an einem Datenverarbeitungsprojekt zur Erfassung physischer Sensordaten aus dem Frachttransport.'
                     ]
                 }
             ]
@@ -533,6 +603,12 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
                 }
             ]
         },
+        skills: {
+            eyebrow: 'Fähigkeiten',
+            title: 'Technologien, mit denen ich arbeite',
+            subtitle: 'Obwohl ich immer neue lerne',
+            items: SKILLS_LIST
+        },
         contact: {
             eyebrow: 'Kontakt',
             title: 'Lass uns zusammenarbeiten',
@@ -544,8 +620,10 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioData> = {
             },
             email: 'a.ruiz.rabasseda@gmail.com',
             location: 'Barcelona, Spanien / Bonn, Deutschland',
-            phone: '+34 656 974 640',
-            phoneLink: '+34656974640',
+            phones: [
+                { display: '+34 656 974 640', link: '+34656974640' },
+                { display: '+49 170 430 5441', link: '+491704305441' }
+            ],
             socials: [
                 { label: 'LinkedIn', url: 'https://linkedin.com/in/aruizrab' },
                 { label: 'GitHub', url: 'https://github.com/aruizrab' }

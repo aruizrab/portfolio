@@ -1,0 +1,33 @@
+# Alex Ruiz - Senior Software Engineer Portfolio
+
+## About
+Alex Ruiz is a Senior Software Engineer based in Barcelona, Spain, and Bonn, Germany. He has over 4 years of experience in the tech industry, specializing in Full-Stack Development, Software Architecture, DevOps, and Technical Leadership. He holds a dual degree in Computer Engineering and Video Game Production.
+
+## Core Skills
+- **Languages:** TypeScript, JavaScript, Java, Kotlin, Python, C#
+- **Front-end:** React, Angular, Vue, HTML5, CSS3, jQuery
+- **Back-end:** Spring Boot, Node.js, Flask, Django, PostgreSQL, MongoDB
+- **DevOps:** Git, GitHub, GitLab, Docker, Jenkins, Elastic Stack
+- **AI & Tools:** OpenRouter, GitHub Copilot, LLMs, Figma
+- **Testing:** JUnit, Jest, Pytest
+- **Game Dev:** Unity, C#, Game Architecture
+
+## Experience
+- **Senior Software Engineer** at NTT DATA Europe & Latam (Jul 2024 - Present)
+- **Mid-Level Software Engineer** at NTT DATA Europe & Latam (Jul 2023 - Jun 2024)
+- **Junior Software Engineer** at NTT DATA Europe & Latam (Apr 2022 - Jun 2023)
+
+## Projects
+- **GAIDGG:** Generative AI-Driven Game Generation.
+- **SODD Framework:** ScriptableObject Driven Development framework for Unity.
+- **Heist Academy:** A puzzle and stealth 3D game.
+
+## Blog Posts
+- [GAIDGG](https://aruizrab.github.io/portfolio/blog/gaidgg)
+- [SODD Framework](https://aruizrab.github.io/portfolio/blog/sodd-framework)
+- [Heist Academy](https://aruizrab.github.io/portfolio/blog/heist-academy)
+
+## Contact
+- **Email:** a.ruiz.rabasseda@gmail.com
+- **LinkedIn:** https://linkedin.com/in/aruizrab
+- **GitHub:** https://github.com/aruizrab

@@ -16,6 +16,7 @@ export class PortfolioContentService {
     readonly projects = computed(() => this.data().projects);
     readonly experience = computed(() => this.data().experience);
     readonly education = computed(() => this.data().education);
+    readonly skills = computed(() => this.data().skills);
     readonly contact = computed(() => this.data().contact);
     readonly blog = computed(() => this.data().blog);
 }
