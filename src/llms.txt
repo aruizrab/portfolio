@@ -1,33 +1,132 @@
 # Alex Ruiz - Senior Software Engineer Portfolio
 
+## Contact
+- Email: a.ruiz.rabasseda@gmail.com
+- Spanish Phone: (+34) 656 97 46 40
+- German Phone: (+49) 170 4305441
+- Location: Barcelona (Spain) / Bonn (Germany)
+- Birthdate: 05/04/1999
+- Portfolio: aruizrab.github.io/portfolio
+- Linkedin: linkedin.com/in/aruizrab/
+- Github: github.com/aruizrab
+
+## Languages
+- Spanish: Native
+- Catalan: Native
+- English: Certified C1 Level
+- German: A1 (learning for relocation)
+ 
 ## About
-Alex Ruiz is a Senior Software Engineer based in Barcelona, Spain, and Bonn, Germany. He has over 4 years of experience in the tech industry, specializing in Full-Stack Development, Software Architecture, DevOps, and Technical Leadership. He holds a dual degree in Computer Engineering and Video Game Production.
+Alex Ruiz is a Senior Software Engineer based in Barcelona and actively relocating to Bonn, Germany. As an EU citizen he holds full work rights in Germany and requires no visa sponsorship or relocation support.
 
-## Core Skills
-- **Languages:** TypeScript, JavaScript, Java, Kotlin, Python, C#
-- **Front-end:** React, Angular, Vue, HTML5, CSS3, jQuery
-- **Back-end:** Spring Boot, Node.js, Flask, Django, PostgreSQL, MongoDB
-- **DevOps:** Git, GitHub, GitLab, Docker, Jenkins, Elastic Stack
-- **AI & Tools:** OpenRouter, GitHub Copilot, LLMs, Figma
-- **Testing:** JUnit, Jest, Pytest
-- **Game Dev:** Unity, C#, Game Architecture
+He is open to:
+- Full-remote roles (preferably CET) that allow working from Germany
+- On-site or hybrid roles in North Rhine-Westphalia (commutable from Bonn by car)
 
-## Experience
-- **Senior Software Engineer** at NTT DATA Europe & Latam (Jul 2024 - Present)
-- **Mid-Level Software Engineer** at NTT DATA Europe & Latam (Jul 2023 - Jun 2024)
-- **Junior Software Engineer** at NTT DATA Europe & Latam (Apr 2022 - Jun 2023)
-
-## Projects
-- **GAIDGG:** Generative AI-Driven Game Generation.
-- **SODD Framework:** ScriptableObject Driven Development framework for Unity.
-- **Heist Academy:** A puzzle and stealth 3D game.
+Current situation and availability:
+- Current role allows remote work but is restricted to Spanish territory
+- Relocation logistics are in place: car for commuting and temporary accommodation in Bonn
+- Notice and registration: two weeks' notice at his current job; expect ~two extra weeks to complete German resident registration
 
 ## Blog Posts
 - [GAIDGG](https://aruizrab.github.io/portfolio/blog/gaidgg)
 - [SODD Framework](https://aruizrab.github.io/portfolio/blog/sodd-framework)
 - [Heist Academy](https://aruizrab.github.io/portfolio/blog/heist-academy)
 
-## Contact
-- **Email:** a.ruiz.rabasseda@gmail.com
-- **LinkedIn:** https://linkedin.com/in/aruizrab
-- **GitHub:** https://github.com/aruizrab
+## Education
+### Bachelor's Degree in Computer Engineering and Information Systems
+TecnoCampus (UPF) | Mataró, Spain | 09/2018 - 06/2025
+
+- His bachelor's thesis "Integrating Generative Artificial Intelligence in Videogame Environments", which resulted in the GAIDGG project, got nominated for honors.
+
+### Bachelor's Degree in Game Design and Production
+TecnoCampus (UPF) | Mataró, Spain | 09/2018 - 06/2025
+
+- His bachelor's thesis "Creating a Unity Framework for Scriptable Object Driven Development (SODD)", which resulted in the SODD Framework project, got graded with honors.
+
+## Certifications
+### Advanced English Certificate (C1)
+Cambridge | 07/2020
+
+### Driving License: B
+Spanish Traffic Authority (DGT) | 01/2018
+
+## Experience
+
+### TecnoCampus IT Support
+Mataró (Spain) | 09/2019 - 07/2020
+
+Alex began his tech work experience at his university, TecnoCampus, as an intern IT Technician for the IT Support service. He repaired and configured computers for students and staff, updated university systems, and managed helpdesk ticketing.
+
+### Conservas Dani S.A.U
+Vilassar de Mar (Spain) | 10/2021 - 03/2022
+
+In October 2021 Alex Ruiz began an internship in the tech department of Conservas Dani S.A.U. It was a small team led by the company's CTO. During this period he participated as a developer in a data processing project using Python that collected physical sensor data from cargo transport in the warehouse and forwarded it to the company's ERP.
+
+He was later assigned a personal project: a leave management platform to digitalize the process of requesting leaves (medical, legal, etc.) to HR, approving them, and maintaining a history per employee and a status history for each request. He worked independently on this project, communicating directly with the HR manager, gathering requirements, delivering weekly iterations from the MVP, and presenting them for feedback.
+
+The leave management platform was implemented with:
+- Git for version management
+- Frontend: Bootstrap, HTML5, custom CSS when necessary, and jQuery; responsive for desktop, phone and tablet
+- Backend: Python Flask with server-side rendering using Jinja
+- File storage: Amazon S3
+- Database:
+    - MongoDB for storing and retrieving leave requests and platform-specific data
+    - Oracle SQL for employee authentication and querying employee data from company servers
+- Email and SMS updates sent to employees about the status of their requests.
+
+After delivery he received congratulations from the HR department and the CTO for the speed and quality of the work. He subsequently maintained the application, developed new features, improved usability, and fixed bugs based on user feedback. In the later stages of his internship the application expanded to manage paid time off requests and handled a high volume of requests from the roughly 200 employees in the company's Spanish division.
+
+He was then assigned a project to restructure the company's intranet for employees. Working with another intern and leading development, he built a system featuring a login, landing page, a blog for HR news articles, a calendar for upcoming events, and direct access to the leave management platform, all using the same stack as the leave management platform.
+
+### NTT DATA Europe & Latam S.L.
+Barcelona (Spain) | 04/2022 - Present 
+
+Alex Ruiz began at NTT DATA Europe & Latam as a Junior Software Engineer working on Facilitea, Caixabank’s e‑shop. The project followed Scrum practices and involved close collaboration with Caixabank stakeholders to deliver features and fixes. During this period he rebuilt the shop’s landing page; the system used a Java/JSP backend with a plain HTML5/CSS/jQuery frontend (04/2022–02/2023).
+
+A year later he joined Caixabank’s modernization initiative, migrating Facilitea from a legacy monolith to Spring Boot microservices and React microfrontends (using Caixabank’s private frameworks). Leveraging software engineering best practices (architecture patterns, SOLID, clean code, hexagonal architecture, CI workflows, and TDD/BDD), he proposed solutions and workflows adopted by seniors and tech leads. He was promoted to Mid‑Level Software Engineer in 07/2023 and took on responsibilities for release management, leading code reviews, approving PRs, integrating features, and deploying across development, pre‑production and production via GitLab CI/CD and Jenkins. He also used Elasticsearch to monitor server logs and track issues.
+
+By 03/2024, with Facilitea largely stabilized, he was recruited to the loan management branch. There he joined the core application for loan requests, credit assessment and approval workflows, addressing organizational, maintainability and scalability challenges. Applying reference architectures, best‑practice guidelines and targeted refactors, he helped improve the codebase and team workflows, led code reviews, feature integrations and releases, and was promoted to Senior Software Engineer in 07/2024.
+
+His improvements were adopted across other projects in the loan management branch, stabilizing multiple teams and earning recognition that led to inclusion in a league of experts for Caixabank’s technology and architecture. In that role he helped design and implement technical onboarding and training for new engineers, and he served as a reference in the AI integration program—evaluating use cases, productivity impact, prompt engineering guidelines, agent workflows, and knowledge‑base feeding. He developed a library of specialized GitHub Copilot agents and orchestrator agents tailored to the private framework (UI construction with the custom component library, interpreting Figma into component requirements and tests, localization, service calls, framework utilities, and branch management workflows).
+
+Around 06/2025 he received technical leadership over the front‑end slice of a debt management application built from scratch (React microfrontends with the private framework). The fast delivery of the first MVP received stakeholder praise, and he was subsequently entrusted with leading the front‑end slice of a MiFID‑II constrained investment advisory order execution application for high‑net‑worth individuals. He currently manages both projects while providing cross‑functional support across the loan management branch, including the core loan application, and mentoring interns and junior engineers.
+
+NTT DATA received official commendations from Caixabank for the branch’s work, reflecting the collective impact of the measures he proposed and teams’ adoption of them. Throughout these projects he worked extensively with Caixabank’s proprietary React microfrontends framework, addressing module boundaries, shared dependencies, inter‑module communication and scalable distributed frontend systems.
+
+Technologies and tools used across these projects include: TypeScript, JavaScript, React, Microfrontends Architecture, Java, Spring Boot, Jest, JUnit, Cucumber, Git, GitLab, Jenkins, SonarQube, Elastic Stack, Figma, Postman, Jira, Confluence, Swagger and MuleSoft.
+
+## Projects
+
+### GAIDGG (GenAI-Driven Game Generation) - Software Engineering Bachelor's Thesis
+TecnoCampus (UPF) | Mataró, Spain | 09/2024 - 06/2025
+
+Alex Ruiz developed a Unity-based technical demo and research prototype exploring how large language models can drive both world generation and autonomous NPC behaviour in videogame environments. The project was intentionally experimental rather than “product-tidy”: it aimed to test whether contemporary generative AI was sufficiently capable, and how far it could be pushed within the constraints of a single academic year and a solo developer.
+
+On the environment side, he built a 2D top-down tilemap sandbox (Stardew Valley–like) and integrated LLMs via OpenRouter to enable rapid model switching and comparative evaluation across providers in terms of reasoning quality, latency, and cost. A central deliverable was an AI-assisted procedural world generator implemented as a hybrid system: a deterministic Perlin-noise terrain generator produced base layers (deep/shallow water, sand, grass, stone, snow) and vegetation layers (trees, pines, bushes, palms, rocks), while an LLM generated the parameters that control tile inclusion/exclusion, height bands, and densities. The model received the available tiles and their meanings plus the player’s natural-language description, and returned a strict JSON configuration that shaped the generated map, enabling both conventional “sensible” worlds and deliberately counter-intuitive ones when requested. He wrapped this pipeline in a conversational “world-generation wizard” that collected constraints (e.g., world size), asked clarifying questions when prompts were vague, explained system limits, warned on extreme settings, supported iterative refinement (“less water, more land”), and persisted the final world with a name and description. He identified future extension paths such as combining LLM guidance with wave-function-collapse techniques for structured content like dungeons or cities.
+
+The second major component was an LLM-driven NPC system inspired by Google’s “Generative Agents” research, adapted for agents that can interact with the world using the same action surface as a player. He designed and implemented a cognitive architecture with a clear world ontology (entities, items, stats, positions, global clock) and a text-based command language (e.g., inspect, scan, walk, follow, attack, heal, craft, give/take, equip, place) that both humans and NPCs use. Each NPC is orchestrated through modules: a Perception Unit converts raw game events into structured natural-language “cognitive records” annotated with entity identifiers and spatial context; a Memory Unit stores and retrieves long-term memories indexed with embeddings for semantic search and ranked by similarity, recency, and importance; a Conversation Unit manages LLM interaction and enforces a strict output schema separating internal thoughts, dialogue, state updates, and executable commands; and a Cognitive Unit conducts the loop by summarising recent context, retrieving relevant memories, requesting the next decision from the model, and executing the resulting command sequence in the world.
+
+He also implemented agent needs and lifecycle management (health, nutrition, wakefulness), including starvation and sleep behaviours. Sleep served both as a mechanical reset and as a cognitive consolidation phase: the agent’s recent stream was summarised into long-term memory, then selectively reloaded on wake to support continuity (“yesterday I built a chest near the river; return there”). NPCs were authored via a single paragraph of natural-language personality and backstory rather than hand-coded behaviour trees, allowing distinct behavioural patterns to emerge from identical capabilities. In simulation runs, this architecture produced unscripted social situations—misuse of commands followed by learning via error feedback, avoidance and interpersonal friction driven by personality, disputes over resources escalating into combat and negotiation, and knowledge transfer when an agent learned a new capability and taught it to others—demonstrating believable emergent interaction from perception, memory, needs, and constrained action execution rather than bespoke scripting.
+
+Operationally, he tracked and adapted to the rapidly shifting LLM ecosystem during the project (starting September 2024), managing practical constraints around token usage, context-window cost, and model capability evolution, and leveraging OpenRouter to iterate quickly as prices and model performance changed. The work was recognised by evaluators as unusually hands-on for an academic thesis—building novel, functioning systems in a fast-moving domain rather than reproducing established patterns—and it was nominated for honours, reflecting both technical ambition and execution quality under real-world constraints.
+
+### SODD Framework - Videogame Production Bachelor's Thesis
+TecnoCampus (UPF) | Mataró, Spain | 09/2023 - 06/2024
+
+Alex Ruiz developed the SODD (ScriptableObject Driven Development) Framework as his bachelor thesis project, formalising lessons learned from an earlier Unity stealth video-game prototype (“Heist Academy”) into a reusable, product-grade architecture for Unity built around ScriptableObjects. Inspired by Ryan Hipple’s ScriptableObject-driven patterns, he designed the framework to reduce tight coupling, scene-bound logic, singleton-driven global state, and hard-to-debug dependencies typical of large MonoBehaviour-heavy projects. He treated the thesis as a real software product: defining objectives and constraints upfront, deriving requirements and prioritising them with MoSCoW, writing GitHub user stories with Definitions of Ready/Done, and running an industry-style Git workflow (feature branches, PRs, develop/main, gated merges via automation).
+
+Technically, he implemented a cohesive Unity package that provides Scriptable Events (generic payload events with inspector tooling, debug logging, and editor-time invocation), Event Listeners that bridge events into UnityEvents for inspector-wired behaviour, Scriptable Variables with change notifications and observer components for reactive UI/system updates, and Scriptable Collections (runtime sets) emitting add/remove signals for decoupled group state such as inventory. He also integrated Unity’s new Input System through ScriptableObject-based Input Action Handlers that translate input phases into events/values, plus Control Scheme Handlers that infer the active device/control scheme and drive UI prompts accordingly. For persistence, he built Variable Repositories that serialize marked variables to disk and restore them on startup, supported by editor tooling that can auto-populate repositories by scanning the project. To ensure “asset-only” systems run at runtime, he introduced “Passive ScriptableObjects” with an editor utility that injects scene references to force inclusion/initialisation (and explicitly noted Addressables as a cleaner modern alternative).
+
+To validate the framework under real gameplay pressure, he shipped a complete sample game, “Ice Heat,” a playable 2D platformer inspired by Celeste, featuring tight movement, directional dashing, and a temperature-wave mechanic that freezes/boils water; core systems (movement, dash orchestration, progression, collectibles, UI, audio, settings) were implemented on top of the framework’s events/variables/collections and input handlers. He packaged and released the framework as an open-source Unity package (Runtime/Editor/Tests structure, package manifest, changelog, MIT license), implemented automated testing/build pipelines via GitHub Actions, and generated/published documentation via DocFX from XML comments to GitHub Pages, using semantic versioning and release automation. The project earned the highest possible grade and an honours distinction, demonstrating end-to-end capability from architecture and implementation through tooling, documentation, CI/CD, packaging, and delivery of a production-like developer experience within Unity.
+
+### Heist Academy - Videogame Production University Project
+TecnoCampus (UPF) | Mataró, Spain | 09/2022 - 12/2023
+
+Alex contributed the bulk of the engineering work for “Heist Academy,” a three-month university 3D stealth-puzzle project designed to simulate a small game studio pipeline with an immovable deadline and evaluation by industry professionals. Working within an eight-person team in 2022, the project produced a fully playable prototype (one polished level) where the player is an apprentice thief completing “exam” heists inside a staged training environment, earning a 0–10 grade based on performance metrics such as completion time, relics collected, detections by guards/cameras, noise events, and alarm triggers.
+
+With the project’s programming capacity effectively reduced to a single active developer, he assumed end-to-end technical ownership across the codebase. He implemented and integrated core gameplay systems including player movement and controls, camera behaviour, enemy AI, stealth detection (sight and sound), patrol logic, alarm escalation and guard convergence, hiding mechanics (e.g., lockers), distraction tools (e.g., thrown objects to divert guards), camera field-of-view pressure with alarm conditions, interactables and collectibles, key/door gating, level triggers, score calculation and tracking, UI navigation and menus, settings, audio/music management, and general gameplay plumbing required to ship a stable build.
+
+Under time pressure and fast iteration cycles, he prioritised a flexible architecture over one-off scripts to keep designers productive without constant code changes. He introduced early ScriptableObject-driven patterns—Scriptable Events/listeners, data collections, and decoupled state containers—so gameplay systems could communicate through assets rather than hard references or singleton-heavy coupling. This enabled designers to configure interactions, tweak scoring and patrol behaviour, and iterate through the Unity Inspector with reduced dependency on bespoke programming work. These internal tools functioned as a practical prototype of the ScriptableObject-driven architecture he later formalised into the SODD Framework, providing early proof that the approach improved modularity, iteration speed, and maintainability in a real team project with a hard deadline.
+
+Beyond the technical output, the project served as a compressed “studio realism” exercise: he operated under crunch conditions, shipped within a fixed scope (one level with high mechanical density), and collaborated cross-disciplinarily in a team where roles shifted to meet production needs. The experience strengthened his ability to take full responsibility for a codebase, make rapid architectural decisions under pressure, and deliver a playable product despite uneven team contributions.
